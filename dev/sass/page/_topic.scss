@@ -1,0 +1,436 @@
+.topic_wrapper {
+    .topic {
+        width: 1200px;
+        margin: 100px auto 120px;
+
+        // 標題
+        > h1 {
+            text-align: center;
+            font-size: 25px;
+            font-weight: 700;
+            width: 120px;
+            margin: 0 auto 50px;
+            position: relative;
+            text-shadow: 0px 0px 3px rgba(165, 165, 165, 0.5);
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                display: inline-block;
+                border: 1.5px solid black;
+                top: 50%;
+                right: 100%;
+            }
+            &::before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                display: inline-block;
+                border: 1.5px solid black;
+                top: 50%;
+                left: 100%;
+            }
+        }
+
+        // 側邊欄
+        .ask {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 100px; /*調整下方間距*/
+            .ask_wrap {
+                .ask_qa {
+                    width: 350px;
+                    ul > li > a {
+                        border: 1px solid rgba(0, 0, 0, 0.2);
+                        box-sizing: border-box;
+                        display: block;
+                        width: 100%;
+                        height: 50px;
+                        padding: 0px 10px;
+                        line-height: 50px;
+                        text-decoration: none;
+                        background-color: #fff;
+                        color: black;
+
+                        &::after {
+                            content: "\27A4";
+                            position: relative;
+                            left: 250px;
+                        }
+                    }
+                }
+
+                .ask_question {
+                    display: inline-block;
+
+                    a {
+                        color: white;
+                        border-radius: 10px;
+                        margin: 20px 0px;
+                        background-color: rgb(10, 81, 135);
+                        display: block;
+                        height: 40px;
+                        font-size: 20px;
+                        letter-spacing: 10px;
+                        width: 350px;
+                        line-height: 40px;
+                        text-align: center;
+                        text-decoration: none;
+                        transition: all 0.3s;
+                    }
+
+                    &:hover a {
+                        background: orange;
+                        color: black;
+                    }
+                }
+
+                .ask_input {
+                    height: 30px;
+                    width: 350px;
+                    font-size: 0;
+                    > input {
+                        box-sizing: border-box;
+                        outline: none;
+                        border: 1px solid #095187;
+                        border-radius: 0px 5px 5px 0px;
+                        width: calc(100% - 30px);
+                        height: 30px;
+                        vertical-align: top;
+                        -webkit-appearance: none;
+                        padding: 0 10px;
+                        &:focus {
+                            background-color: hsla(200, 80%, 90%, 1);
+                        }
+                    }
+                    a {
+                        position: relative;
+                        border-radius: 8px 0px 0px 8px;
+                        background-color: #095187;
+                        box-sizing: border-box;
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        img {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 20px;
+                        }
+                    }
+                }
+            }
+
+            .swiper-container {
+                box-sizing: border-box;
+                border-right: 10px solid white;
+                border-left: 10px solid white;
+                width: 100%;
+                height: 500px;
+
+                .swiper-wrapper {
+                    .swiper-slide {
+                        text-align: center;
+                        font-size: 18px;
+                        background: #fff;
+                        /* Center slide text vertically */
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+
+        .topic_bar {
+            background: rgba(116, 185, 255, 1);
+            border-radius: 10px;
+            height: 50px;
+            display: flex;
+            font-size: 0;
+
+            .topic_area {
+                margin: 0px 10px;
+                line-height: 50px;
+
+                > p {
+                    color: white;
+                    font-size: 1.125rem;
+                    display: inline-block;
+                    height: 100%;
+                }
+
+                > select {
+                    display: inline-block;
+                    height: 22px;
+                    position: relative;
+                    bottom: 3px;
+                    left: 4px;
+                }
+            }
+        }
+
+        // 瀑布流
+        .topic_box {
+            width: 1200px;
+            margin: 50px auto;
+
+            > div {
+                column-count: 3;
+                column-gap: 60px;
+                .topic_item {
+                    border-radius: 20px;
+                    border: 1px solid rgba(0, 0, 0, 0.125);
+                    overflow: hidden;
+                    width: 100%;
+                    margin-bottom: 60px;
+                    -webkit-column-break-inside: avoid;
+                    > img {
+                        width: 100%;
+                    }
+
+                    //內容文字
+                    .topic_text {
+                        display: flex;
+                        margin: 15px 20px;
+                        width: calc(100% - 40px);
+                        justify-content: space-between;
+
+                        img {
+                            width: 35px;
+                            vertical-align: middle;
+                        }
+                        span {
+                            display: inline-block;
+                            margin-left: 5px;
+                            font-size: 16px;
+                        }
+                    }
+                    //Icon
+                    .text_icon {
+                        display: flex;
+                        align-self: center;
+                        .Icon {
+                            display: flex;
+                            margin-left: 15px;
+                            img {
+                                // border: 1px solid blue;
+                                width: 20px;
+                                height: 20px;
+                            }
+
+                            span {
+                                height: 20px;
+                                line-height: 20px;
+                                margin-left: 5px;
+                                color: #888;
+                            }
+                        }
+                    }
+
+                    > h2 {
+                        display: inline-block;
+                        width: calc(100% - 40px);
+                        margin: 5px 20px;
+                        font-weight: 700;
+                        font-size: 20px;
+                    }
+
+                    > p {
+                        display: inline-block;
+                        margin: 0 20px 15px;
+                        width: calc(100% - 40px);
+                        line-height: 2;
+                        font-size: 16px;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//RWD專區
+@media screen and (max-width: 1200px) {
+    .topic_wrapper {
+        .topic {
+            width: 100%;
+            .ask {
+                width: 100%;
+                flex-wrap: wrap;
+                flex-direction: column-reverse;
+
+                .ask_wrap {
+                    margin: 20px auto;
+                }
+            }
+
+            .topic_box {
+                width: 90%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    .topic_wrapper {
+        .topic {
+            .topic_box > div {
+                column-count: 2;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .topic_wrapper {
+        .topic {
+            > h1 {
+                &::after,
+                &::before {
+                    width: 50%;
+                }
+            }
+
+            .topic_bar {
+                justify-content: center;
+                margin: auto;
+                .topic_area {
+                    margin: 0px 10px;
+                    > p {
+                        font-size: 1rem;
+                    }
+                    > select {
+                        height: 20px;
+                        bottom: 0px;
+                        -webkit-appearance: none;
+                    }
+                }
+            }
+
+            .topic_box {
+                > div {
+                    column-count: 1;
+
+                    .topic_item {
+                        .topic_text {
+                            margin: 10px 20px;
+                            width: calc(100% - 40px);
+                        }
+                        .text span {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .topic_wrapper {
+        .topic {
+            .ask {
+                margin-bottom: 60px;
+
+                .swiper-container {
+                    height: 300px;
+                }
+            }
+
+            .topic_bar {
+                border-radius: 0;
+                .topic_area {
+                    margin: auto;
+                    > p {
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .pagination_block > ul.pagination > li > a {
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                font-size: 16px;
+            }
+            .pagination_block .pagination li {
+                border-radius: 100%;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                margin: 0px 2px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .topic_wrapper {
+        .topic {
+            .ask {
+                .ask_wrap {
+                    width: 300px;
+                    .ask_qa {
+                        margin: 0 auto;
+                        width: 100%;
+                        ul > li > a {
+                            &::after {
+                                left: 195px;
+                            }
+                        }
+                    }
+
+                    .ask_question {
+                        display: inline-block;
+                        margin: 20px auto;
+                        width: 100%;
+
+                        a {
+                            width: 100%;
+                            margin: 0;
+                        }
+                    }
+
+                    .ask_input {
+                        margin: 0 auto;
+                        width: 100%;
+
+                        > input {
+                            width: 270px;
+                        }
+                    }
+                }
+
+                .swiper-container {
+                    height: 300px;
+                }
+            }
+
+            .topic_bar {
+                .topic_area {
+                    > p {
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+
+            .pagination_block > ul.pagination > li > a {
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                font-size: 16px;
+            }
+            .pagination_block .pagination li {
+                border-radius: 100%;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                margin: 0px 2px;
+            }
+        }
+    }
+}

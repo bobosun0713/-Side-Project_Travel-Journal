@@ -1,0 +1,531 @@
+.colimn_wrapper {
+    // 封面
+    .colimn_banner {
+        background-image: url(../img/banner/03.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        padding-top: 35%;
+    }
+    .colimn {
+        width: 1200px;
+        margin: 100px auto 120px;
+        overflow: hidden;
+
+        // 推薦路線
+        .route {
+            font-size: 0;
+            margin: 0px auto 100px;
+
+            h1 {
+                font-size: 28px;
+                font-weight: 500;
+                width: 120px;
+                text-align: center;
+                margin: 0 auto 80px;
+                position: relative;
+                text-shadow: 0px 0px 3px rgba(165, 165, 165, 0.5);
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 100%;
+                    display: inline-block;
+                    border: 1.5px solid black;
+                    top: 50%;
+                    right: 100%;
+                }
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 100%;
+                    display: inline-block;
+                    border: 1.5px solid black;
+                    top: 50%;
+                    left: 100%;
+                }
+            }
+
+            // 地標
+            .route_loc {
+                /* border:1px solid red; */
+                display: flex;
+                justify-content: space-between;
+                font-size: 0;
+                text-align: center;
+                margin-bottom: 50px;
+
+                .route_img {
+                    img {
+                        height: 150px;
+                        width: 150px;
+                        border-radius: 100%;
+                        object-fit: cover;
+                    }
+                }
+                > li p {
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin: 15px auto;
+                }
+            }
+
+            // 路線
+            .route_p {
+                font-size: 16px;
+                li {
+                    width: 95%;
+                    display: flex;
+                    padding: 5px;
+                    border-bottom: 1px dashed rgb(10, 81, 135);
+
+                    .route_p_title {
+                        background-color: rgb(10, 81, 135);
+                        color: white;
+                        border-radius: 5px;
+                        text-align: center;
+                        width: 50px;
+                        height: 30px;
+                        line-height: 30px;
+                        font-size: 18px;
+                    }
+                    .route_p_main {
+                        margin-left: 15px;
+                        text-decoration: none;
+                        line-height: 30px;
+                        color: black;
+                    }
+                }
+            }
+        }
+
+        // 分享按鈕
+        .buttom {
+            position: relative;
+            text-align: center;
+            width: 600px;
+            margin: 0px auto 50px;
+
+            .buttom_img img {
+                box-shadow: 0px 0px 20px 30px #f3f1d6 inset;
+                width: 550px;
+                height: 350px;
+                object-fit: cover;
+            }
+
+            .buttom_p {
+                background-color: rgba(243, 249, 250, 0.6);
+                width: 420px;
+                height: 200px;
+                line-height: 200px;
+                position: absolute;
+                top: 18%;
+                left: 70%;
+                font-size: 20px;
+                font-weight: 500;
+            }
+
+            a {
+                text-align: center;
+                display: inline-block;
+                width: 30%;
+                height: 100%;
+                font-size: 20px;
+                letter-spacing: 10px;
+                line-height: 40px;
+                background-color: rgb(10, 81, 135);
+                filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.3));
+                color: white;
+                border-radius: 10px;
+                text-decoration: none;
+                margin: 30px 0px 30px;
+                transition: all 0.5s;
+                &:hover {
+                    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.3));
+                    background-color: orange;
+                    color: black;
+                }
+            }
+        }
+
+        // 筆記
+        .navUL {
+            overflow: hidden;
+            /* 自己設 */
+            width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            border-bottom: 2px solid rgb(10, 81, 135);
+            .navser {
+                ul {
+                    display: flex;
+                    li {
+                        font-size: 20px;
+                        line-height: 30px;
+                        padding: 0 10px;
+                        cursor: pointer;
+                        margin-right: 10px;
+                        border-radius: 5px 5px 0px 0px;
+                    }
+                    .activeLI {
+                        background: rgb(10, 81, 135);
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .colimn_tab {
+            /* border: 1px solid blue; */
+            width: 1200px;
+            margin: 0 auto;
+
+            .colimn_main {
+                display: flex;
+                margin: 80px auto;
+
+                .main_img {
+                    position: relative;
+
+                    img {
+                        width: 600px;
+                        height: 300px;
+                        object-fit: cover;
+                    }
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        box-shadow: 0px 0px 20px 30px #ffffff inset;
+                    }
+                }
+
+                .main_p {
+                    border-top: 2px dashed #9acadd;
+                    border-bottom: 2px dashed #9acadd;
+                    box-sizing: border-box;
+                    width: 50%;
+                    margin: 0 20px;
+                    position: relative;
+
+                    h1 {
+                        display: inline-block;
+                        font-size: 20px;
+                        margin: 20px 20px;
+                        width: calc(100% - 40px);
+                        font-weight: 700;
+                    }
+
+                    p {
+                        display: inline-block;
+                        font-size: 18px;
+                        margin: 0px 20px;
+                        line-height: 2;
+                        width: calc(100% - 40px);
+                    }
+
+                    .main_p_icon {
+                        display: flex;
+                        width: calc(100% - 40px);
+                        margin: 20px 20px 0px 20px;
+
+                        .main_p_icon1 {
+                            width: calc(100% - 40px);
+                            display: flex;
+
+                            img {
+                                width: 15%;
+                            }
+                            span {
+                                align-self: center;
+                                margin-left: 5%;
+                                color: #888;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .colimn_wrapper {
+        .colimn {
+            width: 100%;
+
+            // 地標
+            .route {
+                width: 100%;
+
+                .route_p {
+                    margin: 0px 20px;
+                }
+            }
+
+            .buttom {
+                .buttom_p {
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                }
+            }
+
+            // 筆記
+            .navUL {
+                width: 100%;
+            }
+            .colimn_tab {
+                width: 100%;
+                .colimn_main {
+                    flex-wrap: wrap;
+                    margin: 50px auto;
+
+                    &:nth-child(2),
+                    &:nth-child(4) {
+                        flex-direction: column-reverse;
+                    }
+
+                    .main_img {
+                        margin: 0 auto;
+                    }
+                    .main_p {
+                        width: 100%;
+                        margin: 10px auto;
+                        border-top: 0px;
+                        h1 {
+                            text-align: center;
+                        }
+                        .main_p_icon {
+                            margin: 10px 20px 10px 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .colimn_wrapper {
+        .colimn {
+            width: 100%;
+
+            // 地標
+            .route {
+                width: 100%;
+                .route_loc {
+                    flex-wrap: nowrap;
+                    overflow-x: scroll;
+
+                    .route_img {
+                        margin: 0px 10px;
+                    }
+                }
+                .route_p {
+                    li {
+                        display: block;
+                        .route_p_main {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .colimn_wrapper {
+        .colimn_banner {
+            padding-top: 60%;
+        }
+        .navUL {
+            .navser {
+                margin: 0 auto;
+            }
+        }
+        .colimn {
+            width: 100%;
+
+            // 地標
+            .route {
+                width: 100%;
+
+                > h1 {
+                    &::after {
+                        width: 50%;
+                    }
+                    &::before {
+                        width: 50%;
+                    }
+                }
+
+                .route_loc {
+                    flex-wrap: nowrap;
+                    overflow-x: scroll;
+
+                    .route_img {
+                        margin: 0px 10px;
+                    }
+                }
+                .route_p {
+                    margin: 0px 15px;
+
+                    li {
+                        display: block;
+                        .route_p_main {
+                            font-size: 16px;
+                            margin: 0;
+                        }
+                        .route_p_title {
+                            width: 50px;
+                        }
+                    }
+                }
+            }
+
+            .buttom {
+                width: 100%;
+                .buttom_img img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                a {
+                    width: 40%;
+                }
+            }
+
+            // 筆記
+            .navUL {
+                flex-wrap: wrap;
+            }
+            .colimn_tab {
+                .colimn_main {
+                    .main_img img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .colimn_wrapper {
+        .colimn {
+            .route {
+                .route_p {
+                    li {
+                        .route_p_main {
+                            font-size: 0.9rem;
+                            margin: 0;
+                        }
+                        .route_p_title {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+
+            .buttom {
+                .buttom_p {
+                    width: 300px;
+                    height: 150px;
+                    line-height: 150px;
+                    font-size: 0.9rem;
+                    top: 10%;
+                }
+
+                a {
+                    font-size: 1rem;
+                    letter-spacing: 5px;
+                }
+            }
+            .navUL {
+                .navser {
+                    ul {
+                        li {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+                .buttom {
+                    .buttom_p {
+                        width: 300px;
+                        height: 170px;
+                        top: 10%;
+                        font-size: 14px;
+                    }
+
+                    a {
+                        width: 50%;
+                    }
+                }
+                .colimn_tab {
+                    #tab0 > .pagination_block > ul.pagination > li > a,
+                    #tab1 > .pagination_block > ul.pagination > li > a {
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                        font-size: 16px;
+                    }
+
+                    .colimn_main {
+                        .main_p {
+                            .main_p_icon {
+                                margin: 10px auto;
+                                justify-content: center;
+
+                                .main_p_icon1 {
+                                    img {
+                                        width: 25%;
+                                    }
+                                    span {
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .colimn_tab {
+                .colimn_main {
+                    .main_p {
+                        p {
+                            font-size: 1rem;
+                        }
+                        .main_p_icon {
+                            .main_p_icon1 {
+                                img {
+                                    width: 25%;
+                                }
+                                span {
+                                    font-size: 0.7rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .pagination_block > ul.pagination > li > a {
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                font-size: 16px;
+            }
+            .pagination_block .pagination li {
+                border-radius: 100%;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                margin: 0px 2px;
+            }
+        }
+    }
+}

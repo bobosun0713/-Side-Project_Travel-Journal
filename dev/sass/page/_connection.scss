@@ -1,0 +1,487 @@
+.connection_wrapper {
+    // 封面
+    .connection_banner {
+        background-image: url("../img/banner/04.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding-top: 35%;
+    }
+    .connection {
+        margin: 100px auto 80px;
+        width: 1200px;
+
+        > h1 {
+            text-align: center;
+            margin: 0 auto;
+            padding: 0px 10px;
+            width: 500px;
+            font-size: 28px;
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+            text-shadow: 0px 0px 3px rgba(165, 165, 165, 0.5);
+        }
+
+        // 關於我們標題
+        > h2 {
+            /* border:1px solid red; */
+            width: 80px;
+            font-size: 1.25rem;
+            position: relative;
+            left: 25px;
+            margin: 100px 0 50px;
+            &::before {
+                content: "";
+                background-image: url(../img/icon/house.svg);
+                background-repeat: no-repeat;
+                width: 20px;
+                height: 20px;
+                left: -25px;
+                position: absolute;
+            }
+        }
+
+        // 關於我們
+        .connection_p {
+            margin: 0px auto 100px;
+            width: 750px;
+            p {
+                font-size: 1.25rem;
+                line-height: 30px;
+                text-align: center;
+            }
+        }
+
+        // 照片
+        .connection_img {
+            .con_img {
+                display: flex;
+                justify-content: space-around;
+                margin-bottom: 60px;
+
+                .con {
+                    width: 250px;
+
+                    img {
+                        border-radius: 100%;
+                        width: 100%;
+                        height: 250px;
+                        object-fit: cover;
+                    }
+
+                    .con-p > h1 {
+                        text-align: center;
+                        font-size: 1.25rem;
+                        font-weight: 700;
+                        margin: 20px 0px;
+                    }
+
+                    .con-p > p {
+                        font-size: 1.125rem;
+                        line-height: 25px;
+                        letter-spacing: 1.2px;
+                        text-align: left;
+                        margin: 10px 0px;
+                    }
+                }
+            }
+        }
+
+        // 聯絡我們
+        .connection_form {
+            display: flex;
+
+            .connection_logo {
+                margin: auto;
+                width: 300px;
+                height: 300px;
+
+                > img {
+                    height: 200px;
+                    width: 100%;
+                }
+
+                .connection_main {
+                    width: 250px;
+                    margin: 0 auto;
+                    h1 {
+                        text-align: center;
+                        margin: 10px auto;
+                    }
+                    .connection_num {
+                        margin: 10px 15px;
+                        span {
+                            display: inline-block;
+                            vertical-align: top;
+                            height: 30px;
+                            line-height: 30px;
+                            font-size: 16px;
+                        }
+                    }
+
+                    .connection_email {
+                        margin: 10px 15px;
+                        span {
+                            display: inline-block;
+                            vertical-align: top;
+                            height: 30px;
+                            line-height: 30px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+
+            // 表單
+            .connection_table {
+                border-left: 1px solid #888;
+                margin: 50px auto 50px;
+                width: 950px;
+
+                .frame_block {
+                    > label {
+                        text-align: right;
+                        margin-bottom: 25px;
+                        font-size: 20px;
+                        font-weight: 700;
+                        /* border: 1px solid black; */
+                        display: inline-block;
+                        height: 20px;
+                        width: 300px;
+                    }
+
+                    > .radio {
+                        display: inline-block;
+                        font-size: 0.875rem;
+                    }
+
+                    > input {
+                        border: 1px solid rgba(0, 0, 0, 0.2);
+                        width: 350px;
+                        height: 25px;
+                        border-radius: 5px;
+                        padding: 0 5px;
+                        outline: none;
+
+                        &:focus {
+                            background-color: hsla(200, 80%, 90%, 1);
+                        }
+                    }
+
+                    > textarea {
+                        border: 1px solid rgba(0, 0, 0, 0.2);
+                        vertical-align: top;
+                        display: inline-block;
+                        border-radius: 5px;
+                        resize: none;
+                        width: 350px;
+                        height: 100px;
+                        outline: none;
+                        padding: 5px;
+                    }
+
+                    .check {
+                        margin-top: 10px;
+                        display: inline-block;
+                        font-size: 14px;
+
+                        > label {
+                            /* border: 1px solid red; */
+                            display: inline-block;
+                        }
+
+                        > input {
+                            /* border: 1px solid blue; */
+                            font-size: 12px;
+                            width: 14px;
+                        }
+                    }
+                }
+
+                .frame_bottom {
+                    margin-top: 20px;
+
+                    > label {
+                        display: inline-block;
+                        width: 300px;
+                    }
+
+                    > input {
+                        border-radius: 10px;
+                        background: rgb(10, 81, 135);
+                        width: 80px;
+                        height: 40px;
+                        color: white;
+                        font-size: 15px;
+                        font-weight: 700;
+                        cursor: pointer;
+                        -webkit-appearance: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// RWD 專區
+@media screen and (max-width: 1200px) {
+    .connection_wrapper {
+        .connection {
+            width: 100%;
+
+            .connection_form {
+                flex-wrap: wrap;
+
+                .connection_table {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .connection_wrapper {
+        .connection {
+            width: 100%;
+
+            .connection_p {
+                margin: 0px auto 100px;
+                width: 90%;
+            }
+
+            .connection_img {
+                .con_img > .con {
+                    width: 240px;
+                }
+            }
+
+            .connection_form {
+                flex-wrap: wrap;
+
+                .connection_table {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .connection_wrapper {
+        .connection_banner {
+            padding-top: 60%;
+        }
+        .connection {
+            width: 100%;
+            > h1 {
+                width: 370px;
+                font-size: 1.25rem;
+            }
+            > h2 {
+                font-size: 1.125rem;
+                margin: 100px 10px 50px;
+                &::before {
+                    width: 18px;
+                }
+            }
+
+            .connection_p {
+                margin: 0px auto 100px;
+                width: 90%;
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+
+            .connection_img {
+                .con_img {
+                    flex-wrap: wrap;
+
+                    .con {
+                        width: 160px;
+
+                        img {
+                            height: 160px;
+                        }
+
+                        .con-p > h1 {
+                            font-size: 1rem;
+                            font-weight: 700;
+                            margin: 20px 0px;
+                        }
+
+                        .con-p > p {
+                            font-size: 0.9rem;
+                            line-height: 20px;
+                            letter-spacing: 1px;
+                            margin: 10px 0px;
+                        }
+                    }
+                }
+            }
+
+            .connection_form {
+                flex-wrap: wrap;
+                .connection_table {
+                    width: 100%;
+                    border-left: 0px;
+
+                    .frame_block {
+                        > label {
+                            width: 20%;
+                            font-size: 16px;
+                        }
+                        > input {
+                            width: 60%;
+                            height: 20px;
+                        }
+                        > textarea {
+                            width: 60%;
+                        }
+                        > .radio {
+                            font-size: 0.9rem;
+                            /* border:1px solid red; */
+                        }
+                    }
+
+                    .frame_bottom > label {
+                        width: 40%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .connection_wrapper {
+        .connection {
+            width: 100%;
+            > h1 {
+                width: 370px;
+                font-size: 1.25rem;
+            }
+            > h2 {
+                font-size: 1.125rem;
+                margin: 100px 10px 50px;
+                &::before {
+                    width: 18px;
+                }
+            }
+
+            .connection_p {
+                margin: 0px auto 100px;
+                width: 90%;
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+
+            .connection_img {
+                .con_img {
+                    display: flex;
+                    flex-wrap: wrap;
+                    .con {
+                        width: 245px;
+                        margin-bottom: 20px;
+
+                        img {
+                            height: 245px;
+                        }
+
+                        .con-p > h1 {
+                            font-size: 1rem;
+                            font-weight: 700;
+                            margin: 20px 0px;
+                        }
+
+                        .con-p > p {
+                            font-size: 0.9rem;
+                            line-height: 20px;
+                            letter-spacing: 1px;
+                            margin: 10px 0px;
+                        }
+                    }
+                }
+            }
+
+            .connection_form {
+                flex-wrap: wrap;
+
+                .connection_table {
+                    width: 100%;
+                    padding: 0px 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .connection_wrapper {
+        .connection {
+            width: 100%;
+
+            > h1 {
+                width: 280px;
+                font-size: 1rem;
+            }
+            > h2 {
+                font-size: 1rem;
+                &::before {
+                    width: 16px;
+                }
+            }
+
+            .connection_p {
+                p {
+                    font-size: 0.9rem;
+                }
+            }
+
+            .connection_form {
+                flex-wrap: wrap;
+                .connection_table {
+                    width: 100%;
+                    border-left: 0px;
+                    padding: 0px 10px;
+
+                    .frame_block {
+                        > label {
+                            width: 25%;
+                            font-size: 0.8rem;
+                        }
+                        > input {
+                            width: 50%;
+                            height: 20px;
+                        }
+                        > textarea {
+                            width: 50%;
+                        }
+                        > .radio {
+                            font-size: 0.7rem;
+                        }
+
+                        .check {
+                            font-size: 0.7rem;
+                            > label {
+                                width: 150px;
+                                vertical-align: top;
+                            }
+                        }
+                    }
+
+                    .frame_bottom {
+                        text-align: center;
+                        > label {
+                            width: 0%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

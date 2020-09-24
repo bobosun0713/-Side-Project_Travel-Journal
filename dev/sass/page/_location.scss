@@ -1,0 +1,467 @@
+.location_wrapper {
+    // 封面
+    .location_banner {
+        background-image: url(../img/banner/02.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding-top: 35%;
+    }
+    .location_content {
+        margin: 0 auto 120px;
+        width: 1200px;
+        // 標題
+        > h1 {
+            position: relative;
+            text-align: center;
+            width: 120px;
+            font-size: 28px;
+            font-weight: 500;
+            margin: 100px auto 80px;
+            text-shadow: 0px 0px 3px rgba(165, 165, 165, 0.5);
+            &::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                display: inline-block;
+                border: 1.5px solid black;
+                top: 50%;
+                right: 100%;
+            }
+            &::before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                display: inline-block;
+                border: 1.5px solid black;
+                top: 50%;
+                left: 100%;
+            }
+        }
+
+        // 內容
+        .location {
+            width: 1200px;
+            margin: 0 auto;
+
+            > #tabCon0,
+            #tabCon1,
+            #tabCon2,
+            #tabCon3,
+            #tabCon4,
+            #tabCon5 {
+                display: flex;
+                box-sizing: border-box;
+                font-size: 0;
+
+                .location_img {
+                    > img {
+                        width: 600px;
+                        height: 500px;
+                        border-radius: 10px;
+                        object-fit: cover;
+                    }
+                }
+
+                .location_contain {
+                    > h2 {
+                        width: 95%;
+                        font-size: 28px;
+                        font-weight: 900;
+                        color: #273c75;
+                        padding-left: 15px;
+                    }
+                    .map_p_content {
+                        display: inline-block;
+                        font-size: 18px;
+                        margin: 10px 0px;
+                        width: 95%;
+                        padding-left: 15px;
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+
+        // 輪播內容
+        .navUl {
+            display: flex;
+            justify-content: space-between;
+            width: 1200px;
+            margin: 15px auto;
+            /* 消除照片間隙 */
+            font-size: 0;
+
+            li {
+                list-style: none;
+                width: auto;
+                cursor: pointer;
+
+                img {
+                    width: 200px;
+                    height: 150px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    filter: brightness(0.5);
+                }
+            }
+            .activeLi {
+                color: #fff;
+                filter: brightness(2);
+                transition: all 0.5s;
+            }
+        }
+
+        // 景點選擇
+        .location_main {
+            margin: 0 auto 80px;
+
+            .north {
+                position: relative;
+                display: flex;
+                margin: 0px 0px 40px;
+
+                .north_title {
+                    background-color: rgb(10, 81, 135);
+                    border-radius: 5px;
+
+                    h1 {
+                        color: white;
+                        padding: 10px;
+                        line-height: 30px;
+                        font-size: 24px;
+                        font-weight: 700;
+                    }
+                }
+
+                .north_nav {
+                    align-self: center;
+                    position: relative;
+                    margin-left: 1%;
+
+                    span {
+                        display: inline-block;
+                        font-size: 18px;
+                        line-height: 24px;
+                        margin: 0px 10px;
+
+                        a {
+                            text-decoration: none;
+                            color: black;
+                        }
+                    }
+
+                    .hr {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            border: 1px solid rgb(10, 81, 135);
+                            width: 500px;
+                            bottom: 12px;
+                            left: 400px;
+                        }
+                    }
+                }
+            }
+
+            .main_box {
+                display: flex;
+                justify-content: space-between;
+                font-size: 0;
+
+                .main_box_img {
+                    border-radius: 100%;
+                    overflow: hidden;
+                    width: 230px;
+                    height: 230px;
+                    position: relative;
+                    a {
+                        img {
+                            width: 230px;
+                            height: 230px;
+                            border-radius: 100%;
+                            object-fit: cover;
+                            transition: all 0.5s;
+                        }
+                    }
+                    &:hover .figcaption_1 {
+                        opacity: 0;
+                    }
+                    &:hover .figcaption_2 {
+                        opacity: 1;
+                    }
+
+                    .figcaption_1 {
+                        text-shadow: 0px 0px 5px black;
+                        color: white;
+                        text-align: center;
+                        width: 150px;
+                        font-size: 24px;
+                        font-weight: 700;
+                        position: absolute;
+                        bottom: 10%;
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                        transition: all 0.7s;
+                        opacity: 1;
+                    }
+
+                    .figcaption_2 {
+                        text-shadow: 0px 0px 5px black;
+                        color: white;
+                        text-align: center;
+                        width: 150px;
+                        font-size: 24px;
+                        font-weight: 700;
+                        position: absolute;
+                        bottom: 40%;
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                        transition: all 0.7s;
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// RWD 專區
+@media screen and (max-width: 1220px) {
+    .location_wrapper {
+        .location_content {
+            width: 100%;
+            .location,
+            .location > #tabCon0,
+            .location > #tabCon1,
+            .location > #tabCon2,
+            .location > #tabCon3,
+            .location > #tabCon4,
+            .location > #tabCon5 {
+                display: flex;
+                width: 100%;
+                height: 100%;
+            }
+            /* 內文 */
+            .navUl {
+                width: 100%;
+                li > img {
+                    width: 160px;
+                    height: 140px;
+                }
+            }
+
+            .location_main {
+                .north {
+                    margin: 20px 20px 60px;
+
+                    .north_nav {
+                        h1 {
+                            font-size: 20px;
+                        }
+                        span {
+                            margin: 0 0 0 5px;
+                        }
+                        .hr {
+                            &::after {
+                                width: 360px;
+                                transition: all 0.5s;
+                                bottom: 0;
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+                .main_box {
+                    overflow-x: scroll;
+                    white-space: nowrap;
+                    display: inline-block;
+                    width: 100%;
+
+                    .main_box_img {
+                        display: inline-block;
+                        padding: 15px;
+                    }
+                }
+                &:nth-child(5) .main_box .main_box_img:nth-child(4),
+                &:nth-child(7) .main_box .main_box_img:nth-child(4) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .location_wrapper {
+        .location_content {
+            .location,
+            .location > #tabCon0,
+            .location > #tabCon1,
+            .location > #tabCon2,
+            .location > #tabCon3,
+            .location > #tabCon4,
+            .location > #tabCon5 {
+                .location_img {
+                    width: 100%;
+                    height: 100%;
+                    img {
+                        height: 300px;
+                        width: 100%;
+                    }
+                }
+                .location_contain {
+                    width: 100%;
+                    height: 100%;
+
+                    .map_p_content {
+                        font-weight: 500;
+                        line-height: 20px;
+                    }
+                    p:nth-child(5) {
+                        display: none;
+                    }
+                }
+            }
+
+            /* 內文 */
+            .navUl {
+                width: 100%;
+                flex-wrap: wrap;
+                li > img {
+                    width: 140px;
+                    height: 150px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .location_wrapper {
+        .location_banner {
+            padding-top: 60%;
+        }
+        .location_content {
+            > h1 {
+                &::before {
+                    width: 50%;
+                }
+                &::after {
+                    width: 50%;
+                }
+            }
+            .location,
+            .location > #tabCon0,
+            .location > #tabCon1,
+            .location > #tabCon2,
+            .location > #tabCon3,
+            .location > #tabCon4,
+            .location > #tabCon5 {
+                flex-wrap: wrap;
+                .location_img {
+                    width: 100%;
+                    img {
+                        width: 100%;
+                        height: 200px;
+                    }
+                }
+                .location_contain {
+                    > h2 {
+                        padding: 10px 10px;
+                        text-align: center;
+                    }
+                    .map_p_content {
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 20px;
+                    }
+                }
+            }
+
+            /* 內文 */
+            .navUl {
+                width: 100%;
+
+                flex-wrap: wrap;
+                justify-content: space-around;
+
+                li > img {
+                    margin: 5px;
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+
+            .location_main {
+                .north {
+                    .north_title {
+                        h1 {
+                            font-size: 20px;
+                        }
+                    }
+                    .north_nav {
+                        span {
+                            font-size: 1rem;
+                        }
+                        .hr {
+                            &::after {
+                                width: 270px;
+                                transition: all 0.5s;
+                                bottom: 0;
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+                .main_box {
+                    overflow-x: scroll;
+                    white-space: nowrap;
+                    display: inline-block;
+                    width: 100%;
+
+                    .main_box_img {
+                        display: inline-block;
+                        padding: 15px;
+                    }
+                }
+                &:nth-child(5) .main_box .main_box_img:nth-child(4),
+                &:nth-child(7) .main_box .main_box_img:nth-child(4) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 374px) {
+    .location_wrapper {
+        .location_content {
+            /* 內文 */
+            .navUl {
+                li > img {
+                    margin: 5px 0;
+                }
+            }
+
+            .location_main {
+                .north {
+                    .north_title {
+                        h1 {
+                            font-size: 1rem;
+                        }
+                    }
+                    .north_nav {
+                        span {
+                            font-size: 0.7rem;
+                        }
+                        .hr {
+                            &::after {
+                                width: 220px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

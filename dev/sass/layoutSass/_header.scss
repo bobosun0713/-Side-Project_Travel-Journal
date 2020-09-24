@@ -1,0 +1,250 @@
+.header {
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    // box-shadow: 0px 2px 10px black;
+    width: 1200px;
+    margin: 0 auto;
+    position: unset;
+
+    // LOGO
+    .logo {
+        font-size: 0;
+        a {
+            display: inline-block;
+            height: 100%;
+            img {
+                width: 300px;
+                height: 100%;
+                margin-left: 20px;
+            }
+        }
+    }
+
+    // 選單
+    .main_nav {
+        margin-right: 20px;
+
+        .nav_list {
+            height: 100%;
+            display: flex;
+            margin: 0px auto;
+            list-style: none;
+            vertical-align: middle;
+
+            li {
+                a {
+                    height: 100%;
+                    line-height: 80px;
+                    display: inline-block;
+                    padding: 0px 20px;
+                    font-size: 18px;
+                    text-decoration: none;
+                    position: relative;
+                    color: black;
+
+                    .on {
+                        &::before {
+                            transform: translate(-50%, 0) scaleX(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 漢堡選單
+    .btn_switch {
+        outline: none;
+        display: none;
+    }
+
+    // 導覽列下方特效
+    .bottom_line {
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 15px;
+            height: 3px;
+            width: 65%;
+            background-color: black;
+            transform-origin: center;
+            transform: translate(-50%, 0%) scalex(0);
+            transition: transform 0.7s;
+        }
+        &:hover::before {
+            transform: translate(-50%, 0) scaleX(1);
+        }
+    }
+    .on {
+        &::before {
+            transform: translate(-50%, 0) scaleX(1);
+        }
+    }
+}
+/* RWD */
+@media screen and (max-width: 1199px) {
+    .header {
+        width: 100%;
+        background-color: white;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        height: 50px;
+        z-index: 10;
+        box-shadow: 0px 1px 5px black;
+
+        // LOGO
+        .logo > a img {
+            width: 180px;
+        }
+
+        // 選單
+        .main_nav {
+            /* position: relative; */
+            position: absolute;
+            top: 50px;
+            width: 100%;
+            display: none;
+            z-index: 1;
+
+            .nav_list {
+                flex-direction: column;
+                text-align: center;
+                background-color: rgba(255, 255, 255, 0.98);
+                height: 100vh;
+            }
+        }
+
+        // 漢堡選單
+        .btn_switch {
+            display: inline-block;
+            position: absolute;
+            display: block;
+            right: 0;
+            top: -3px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .header {
+        .main_nav {
+            display: block !important;
+        }
+    }
+}
+
+//漢堡選單
+.hamburger {
+    padding: 15px 15px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+}
+.hamburger:hover {
+    opacity: 0.7;
+}
+.hamburger.is-active:hover {
+    opacity: 0.7;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+    background-color: #000;
+}
+
+.hamburger-box {
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+    content: "";
+    display: block;
+}
+.hamburger-inner::before {
+    top: -10px;
+}
+.hamburger-inner::after {
+    bottom: -10px;
+}
+
+.hamburger--3dx .hamburger-box {
+    perspective: 80px;
+}
+
+.hamburger--3dx .hamburger-inner {
+    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
+        background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.hamburger--3dx .hamburger-inner::before,
+.hamburger--3dx .hamburger-inner::after {
+    transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger--3dx.is-active .hamburger-inner {
+    background-color: transparent !important;
+    transform: rotateY(180deg);
+}
+.hamburger--3dx.is-active .hamburger-inner::before {
+    transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+.hamburger--3dx.is-active .hamburger-inner::after {
+    transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+
+// 3DX Reverse
+.hamburger--3dx-r .hamburger-box {
+    perspective: 80px;
+}
+
+.hamburger--3dx-r .hamburger-inner {
+    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
+        background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.hamburger--3dx-r .hamburger-inner::before,
+.hamburger--3dx-r .hamburger-inner::after {
+    transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger--3dx-r.is-active .hamburger-inner {
+    background-color: transparent !important;
+    transform: rotateY(-180deg);
+}
+.hamburger--3dx-r.is-active .hamburger-inner::before {
+    transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+.hamburger--3dx-r.is-active .hamburger-inner::after {
+    transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
