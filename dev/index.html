@@ -7,12 +7,12 @@
         <title>Travel Journal</title>
         <link rel="shortcut icon" href="./img/logo/title.png" type="image/x-icon" />
         <link rel="stylesheet" href="./css/main.css" />
-        <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css" />
+        <link rel="stylesheet" href="./css/swiper.min.css" />
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-        <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+        <script src="./js/swiper.min.js"></script>
     </head>
 
     <body>
@@ -27,7 +27,7 @@
             <div class="index_banner"></div>
             <!-- 第一區 -->
             <section class="section_1">
-                <h1>熱門景點</h1>
+                <h2>熱門景點</h2>
                 <div class="section_1_box" data-aos="flip-left" data-aos-duration="1000">
                     <div class="box_1">
                         <a href=""><img src="./img/index/hoi_sen_mori.jpg" /><span>森活村</span></a>
@@ -50,7 +50,7 @@
             </section>
             <!-- 第二區 -->
             <section class="section_2">
-                <h1>旅遊分享</h1>
+                <h2>旅遊分享</h2>
                 <div class="section_2_content">
                     <div class="abgne_tab">
                         <div class="tab_container">
@@ -60,7 +60,7 @@
                                 </div>
                                 <div class="item_p">
                                     <div class="item_border">
-                                        <h2>武德殿</h2>
+                                        <h3>武德殿</h3>
                                         <p>
                                             日式風格的台南武德殿現為忠義國小禮堂，為日據時代宣揚傳統武道場，看似日本神社造型，其實整棟都是用鋼筋混凝土仿傳統木造而成的殿堂，台南這座最具規模的武...
                                         </p>
@@ -74,7 +74,7 @@
                                 </div>
                                 <div class="item_p">
                                     <div class="item_border">
-                                        <h2>翠湖水上餐廳</h2>
+                                        <h3>翠湖水上餐廳</h3>
                                         <p>
                                             翠湖除了有室內的座位區，另外還有戶外區，涼涼的晚上坐在小棚子用餐，感覺一定很不錯，而且店家還有另外規劃送餐車呢之前聽朋友說晚上點燈後的翠湖別有一番風...
                                         </p>
@@ -88,7 +88,7 @@
                                 </div>
                                 <div class="item_p">
                                     <div class="item_border">
-                                        <h2>九份</h2>
+                                        <h3>九份</h3>
                                         <p>
                                             原以為時間晚了，遊客應該會比較少，結果大錯特錯，遊客依然好多，而且直至入夜後，店家都要打烊了，人潮還是不少...外國觀光客很喜歡這個與日本動畫大師宮崎駿...
                                         </p>
@@ -102,7 +102,7 @@
                                 </div>
                                 <div class="item_p">
                                     <div class="item_border">
-                                        <h2>忘憂谷</h2>
+                                        <h3>忘憂谷</h3>
                                         <p>
                                             要說世界上有能忘憂的地方在哪？我想這一刻我找到了，基隆最新IG打卡約會勝地～望幽谷登場，穿過像宮崎駿風之谷般的綠谷，等待著旅人的是美到無法形容的藍海可...
                                         </p>
@@ -116,7 +116,7 @@
                                 </div>
                                 <div class="item_p">
                                     <div class="item_border">
-                                        <h2>格林奇幻森林</h2>
+                                        <h3>格林奇幻森林</h3>
                                         <p>
                                             近幾年來台灣休閒旅遊風氣興盛、手機普及、各地因應而生了好多家浪漫、夢幻的私人莊園及休閒農場及餐廳，同時也是拜臉書、IG打卡夯，人人都想成為往美、網紅於...
                                         </p>
@@ -172,100 +172,133 @@
             </section>
             <!-- 第三區 -->
             <section class="section_3">
-                <h1>熱門話題</h1>
-                <div class="section_3_box">
-                    <div>
-                        <div class="container3_item" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                <h2>熱門話題</h2>
+                <div class="section_3_container">
+                    <div class="section_3_box" data-aos="fade-up" data-aos-delay="400">
+                        <div class="secImg">
                             <img src="./img/index/food/chijo.jpg" alt="" />
-                            <div class="container_text">
-                                <div class="text"><img src="./img/icon/family01.png" /><span>Jerry</span></div>
-                                <div class="text_icon">
-                                    <div class="Icon"><img src="./img/icon/heart.png" /><span>1232</span></div>
-                                    <div class="Icon"><img src="./img/icon/eye.png" /><span>1232</span></div>
-                                </div>
+                        </div>
+                        <div class="sec3_status">
+                            <div class="sec3_status--icon">
+                                <img src="./img/icon/family01.png" alt="" /><span>Jerry</span>
                             </div>
-                            <h2>美食</h2>
+                            <div class="sec3_status--icon">
+                                <img src="./img/icon/heart.png" alt="" /><span>123</span>
+                            </div>
+                            <div class="sec3_status--icon"><img src="./img/icon/eye.png" alt="" /><span>321</span></div>
+                        </div>
+                        <div class="sec3_text">
+                            <h3>美食</h3>
                             <p>
                                 湯頭選擇日本味非常濃郁！如果喜歡濃郁但是不要太濃的話建議選台灣味（比較合台灣人的胃口）料多豐富、吃完一碗可以飽一整個下午會想再去吃，人多的時候要排...
                             </p>
                         </div>
-                        <div class="container3_item" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-                            <img src="./img/index/food/snow_ice.jpg" alt="" />
-                            <div class="container_text">
-                                <div class="text"><img src="./img/icon/family01.png" /><span>Jerry</span></div>
-                                <div class="text_icon">
-                                    <div class="Icon"><img src="./img/icon/heart.png" /><span>1232</span></div>
-                                    <div class="Icon"><img src="./img/icon/eye.png" /><span>1232</span></div>
-                                </div>
+                    </div>
+                    <div class="section_3_box" data-aos="fade-up" data-aos-delay="600">
+                        <div class="secImg">
+                            <img src="./img/index/food/lancheng_jingying_roast_duck.jpg" alt="" />
+                        </div>
+                        <div class="sec3_status">
+                            <div class="sec3_status--icon">
+                                <img src="./img/icon/family01.png" alt="" /><span>Jerry</span>
                             </div>
-                            <h2>美食</h2>
+                            <div class="sec3_status--icon">
+                                <img src="./img/icon/heart.png" alt="" /><span>123</span>
+                            </div>
+                            <div class="sec3_status--icon"><img src="./img/icon/eye.png" alt="" /><span>321</span></div>
+                        </div>
+                        <div class="sec3_text">
+                            <h3>美食</h3>
                             <p>
                                 口味上還不錯，奶茶比較討喜，捲捲覺得來到『夜貓子雪花氷』就算是女王或是宅姐，一進門都會秒變公主，簡直是少女心超級殺手！好不好吃不會擺在第一順位考量...
                             </p>
                         </div>
-                        <div class="container3_item" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                    </div>
+                    <div class="section_3_box" data-aos="fade-up" data-aos-delay="800">
+                        <div class="secImg">
                             <img src="./img/index/food/white_wood.jpg" alt="" />
-                            <div class="container_text">
-                                <div class="text"><img src="./img/icon/family01.png" /><span>Jerry</span></div>
-                                <div class="text_icon">
-                                    <div class="Icon"><img src="./img/icon/heart.png" /><span>1232</span></div>
-                                    <div class="Icon"><img src="./img/icon/eye.png" /><span>1232</span></div>
-                                </div>
+                        </div>
+                        <div class="sec3_status">
+                            <div class="sec3_status--icon">
+                                <img src="./img/icon/family01.png" alt="" /><span>Jerry</span>
                             </div>
-                            <h2>住宿</h2>
+                            <div class="sec3_status--icon">
+                                <img src="./img/icon/heart.png" alt="" /><span>123</span>
+                            </div>
+                            <div class="sec3_status--icon"><img src="./img/icon/eye.png" alt="" /><span>321</span></div>
+                        </div>
+                        <div class="sec3_text">
+                            <h3>住宿</h3>
                             <p>
                                 WoodWhiteHouse 白木旅人宜蘭頭城鎮裡的小住所Karen &
                                 Rick兩人親手打造自然舒適空間Karen是設計師也是演員Rick是船長也是衝浪教練房子裡主要氛圍...
                             </p>
                         </div>
-
-                        <div class="container3_item" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-                            <img src="./img/index/food/tseng_kee_mochi.jpg" alt="" />
-                            <div class="container_text">
-                                <div class="text"><img src="./img/icon/family01.png" /><span>Jerry</span></div>
-                                <div class="text_icon">
-                                    <div class="Icon"><img src="./img/icon/heart.png" /><span>1232</span></div>
-                                    <div class="Icon"><img src="./img/icon/eye.png" /><span>1232</span></div>
-                                </div>
-                            </div>
-                            <h2>美食</h2>
-                            <p>
-                                來到花蓮想買伴手禮或講到麻糬的話，其實不外乎就是「曾記麻糬」和「阿美麻糬」兩家，很多地方和店家也都有在賣花蓮薯或花蓮芋，說真的吃起來都大同小異...
-                            </p>
+                    </div>
+                    <div class="section_3_box" data-aos="fade-up" data-aos-delay="800">
+                        <div class="secImg">
+                            <img src="./img/index/food/white_wood.jpg" alt="" />
                         </div>
-                        <div class="container3_item" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-                            <img src="./img/index/food/lancheng_jingying_roast_duck.jpg" alt="" />
-                            <div class="container_text">
-                                <div class="text"><img src="./img/icon/family01.png" /><span>Jerry</span></div>
-                                <div class="text_icon">
-                                    <div class="Icon"><img src="./img/icon/heart.png" /><span>1232</span></div>
-                                    <div class="Icon"><img src="./img/icon/eye.png" /><span>1232</span></div>
-                                </div>
+                        <div class="sec3_status">
+                            <div class="sec3_status--icon">
+                                <img src="./img/icon/family01.png" alt="" /><span>Jerry</span>
                             </div>
-                            <h2>美食</h2>
-                            <p>
-                                歐~還沒吃過 蘭城晶英酒店
-                                一鴨五吃的{霸王櫻桃鴨}實在太弱了啦~~沒錯我就是那位弱弱的人啦嘿嘿實在太期待了"榮獲蕃薯藤網站...
-                            </p>
+                            <div class="sec3_status--icon">
+                                <img src="./img/icon/heart.png" alt="" /><span>123</span>
+                            </div>
+                            <div class="sec3_status--icon"><img src="./img/icon/eye.png" alt="" /><span>321</span></div>
                         </div>
-                        <div class="container3_item" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-                            <img src="./img/index/food/lancheng_jingying_roast_duck.jpg" alt="" />
-                            <div class="container_text">
-                                <div class="text"><img src="./img/icon/family01.png" /><span>Jerry</span></div>
-                                <div class="text_icon">
-                                    <div class="Icon"><img src="./img/icon/heart.png" /><span>1232</span></div>
-                                    <div class="Icon"><img src="./img/icon/eye.png" /><span>1232</span></div>
-                                </div>
-                            </div>
-                            <h2>美食</h2>
+                        <div class="sec3_text">
+                            <h3>住宿</h3>
                             <p>
-                                歐~還沒吃過 蘭城晶英酒店 一鴨五吃的{霸王櫻桃鴨} 實在太弱了啦~~沒錯我就是那位弱弱的人啦
-                                嘿嘿實在太期待了"榮獲蕃薯藤網站...
+                                WoodWhiteHouse 白木旅人宜蘭頭城鎮裡的小住所Karen &
+                                Rick兩人親手打造自然舒適空間Karen是設計師也是演員Rick是船長也是衝浪教練房子裡主要氛圍...
                             </p>
                         </div>
                     </div>
-                    <button class="more_btn">MORE</button>
+                    <div class="section_3_box" data-aos="fade-up" data-aos-delay="600">
+                        <div class="secImg">
+                            <img src="./img/index/food/chijo.jpg" alt="" />
+                        </div>
+                        <div class="sec3_status">
+                            <div class="sec3_status--icon">
+                                <img src="./img/icon/family01.png" alt="" /><span>Jerry</span>
+                            </div>
+                            <div class="sec3_status--icon">
+                                <img src="./img/icon/heart.png" alt="" /><span>123</span>
+                            </div>
+                            <div class="sec3_status--icon"><img src="./img/icon/eye.png" alt="" /><span>321</span></div>
+                        </div>
+                        <div class="sec3_text">
+                            <h3>美食</h3>
+                            <p>
+                                湯頭選擇日本味非常濃郁！如果喜歡濃郁但是不要太濃的話建議選台灣味（比較合台灣人的胃口）料多豐富、吃完一碗可以飽一整個下午會想再去吃，人多的時候要排...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="section_3_box" data-aos="fade-up" data-aos-delay="400">
+                        <div class="secImg">
+                            <img src="./img/index/food/white_wood.jpg" alt="" />
+                        </div>
+                        <div class="sec3_status">
+                            <div class="sec3_status--icon">
+                                <img src="./img/icon/family01.png" alt="" /><span>Jerry</span>
+                            </div>
+                            <div class="sec3_status--icon">
+                                <img src="./img/icon/heart.png" alt="" /><span>123</span>
+                            </div>
+                            <div class="sec3_status--icon"><img src="./img/icon/eye.png" alt="" /><span>321</span></div>
+                        </div>
+                        <div class="sec3_text">
+                            <h3>住宿</h3>
+                            <p>
+                                WoodWhiteHouse 白木旅人宜蘭頭城鎮裡的小住所Karen &
+                                Rick兩人親手打造自然舒適空間Karen是設計師也是演員Rick是船長也是衝浪教練房子裡主要氛圍...
+                            </p>
+                        </div>
+                    </div>
                 </div>
+                <a href="./topic.html" class="more">More</a>
             </section>
             @@include('./layout/footer.html')
         </div>

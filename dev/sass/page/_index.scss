@@ -1,3 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    // background-image: url(../img/banner/background/background-04.png);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    background-position: center;
+}
 .wrapper {
     position: relative;
 
@@ -9,40 +18,43 @@
         padding-top: 50%;
     }
 
+    // 標題
+    h2 {
+        width: 120px;
+        position: relative;
+        text-align: center;
+        font-size: 28px;
+        font-weight: 700;
+        margin: 0 auto 80px;
+        text-shadow: 0px 0px 3px rgba(165, 165, 165, 0.5);
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            display: inline-block;
+            height: 3px;
+            background-color: black;
+            top: 50%;
+            right: 100%;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            display: inline-block;
+            height: 3px;
+            background-color: black;
+            top: 50%;
+            left: 100%;
+        }
+    }
+
     .section_1 {
         width: 100%;
-        margin: 150px auto 120px;
+        margin: 150px auto 100px;
         overflow: hidden;
-
-        // 標題
-        > h1 {
-            width: 120px;
-            position: relative;
-            text-align: center;
-            font-size: 28px;
-            font-weight: 700;
-            margin: 0 auto 80px;
-            text-shadow: 0px 0px 3px rgba(165, 165, 165, 0.5);
-
-            &::after {
-                position: absolute;
-                content: "";
-                width: 100%;
-                display: inline-block;
-                border: 1.5px solid black;
-                top: 50%;
-                right: 100%;
-            }
-            &::before {
-                position: absolute;
-                content: "";
-                width: 100%;
-                display: inline-block;
-                border: 1.5px solid black;
-                top: 50%;
-                left: 100%;
-            }
-        }
+        transition: all 0.5s;
 
         // 內容
         .section_1_box {
@@ -68,13 +80,17 @@
                 }
                 span {
                     position: absolute;
+                    padding: 5px 15px;
                     font-size: 1.5rem;
                     font-weight: 500;
                     bottom: 5%;
                     left: 50%;
                     transform: translate(-50%, 0);
-                    text-shadow: rgb(54, 15, 15) 0px 0px 5px;
-                    color: white;
+                    text-shadow: black 0px 0px 2px;
+                    color: black;
+                    border-radius: 15px;
+                    background-color: rgba(255, 255, 255, 0.651);
+                    box-shadow: 0px 0px 10px white;
                 }
             }
 
@@ -95,13 +111,17 @@
                 }
                 span {
                     position: absolute;
+                    padding: 5px 15px;
                     font-size: 1.5rem;
                     font-weight: 500;
                     bottom: 5%;
                     left: 50%;
                     transform: translate(-50%, 0);
-                    text-shadow: black 0px 0px 5px;
-                    color: white;
+                    text-shadow: black 0px 0px 2px;
+                    color: black;
+                    border-radius: 15px;
+                    background-color: rgba(255, 255, 255, 0.651);
+                    box-shadow: 0px 0px 10px white;
                 }
             }
         }
@@ -115,37 +135,7 @@
         width: 100%;
         margin: 0 auto;
         overflow: hidden;
-
-        // 標題
-        > h1 {
-            width: 120px;
-            margin: 0 auto;
-            padding: 60px 0;
-            font-size: 28px;
-            font-weight: 500;
-            text-align: center;
-            position: relative;
-            text-shadow: 0px 0px 3px rgba(165, 165, 165, 0.5);
-
-            &::after {
-                position: absolute;
-                content: "";
-                width: 100%;
-                display: inline-block;
-                border: 1.5px solid black;
-                top: 50%;
-                right: 100%;
-            }
-            &::before {
-                position: absolute;
-                content: "";
-                width: 100%;
-                display: inline-block;
-                border: 1.5px solid black;
-                top: 50%;
-                left: 100%;
-            }
-        }
+        padding: 50px 0;
 
         // 內容
         .section_2_content {
@@ -201,7 +191,7 @@
                                 height: 220px;
                                 position: relative;
 
-                                h2 {
+                                h3 {
                                     font-size: 20px;
                                     font-weight: 700;
                                     margin: 20px 15px;
@@ -239,6 +229,7 @@
                     width: 100%;
                     justify-content: space-between;
                     display: flex;
+                    transition: all 0.5s;
 
                     li {
                         width: 200px;
@@ -265,6 +256,7 @@
                                 -o-object-fit: cover;
                                 object-fit: cover;
                                 border-radius: 100%;
+                                transition: all 0.5s;
                             }
 
                             .img_title {
@@ -290,156 +282,116 @@
     }
 
     .section_3 {
-        width: 100%;
-        margin: 150px auto 80px;
-
-        // 標題
-        > h1 {
-            position: relative;
-            text-align: center;
-            font-size: 28px;
-            width: 120px;
-            font-weight: 700;
-            margin: 0 auto 80px;
-            text-shadow: 0px 0px 3px rgba(165, 165, 165, 0.5);
-
-            &::after {
-                position: absolute;
-                content: "";
-                width: 100%;
-                display: inline-block;
-                border: 1.5px solid black;
-                top: 50%;
-                right: 100%;
-            }
-            &::before {
-                position: absolute;
-                content: "";
-                width: 100%;
-                display: inline-block;
-                border: 1.5px solid black;
-                top: 50%;
-                left: 100%;
-            }
-        }
+        width: 1200px;
+        margin: 100px auto 100px;
 
         // 內容
+
+        //外層
+        .section_3_container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
         .section_3_box {
-            width: 1200px;
-            position: relative;
-            margin: 0 auto;
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            width: 350px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            transition: all 0.5s;
+            background-color: white;
 
-            // 瀑布流
-            > div {
-                column-count: 3;
-                column-gap: 60px;
-
-                .container3_item {
-                    border-radius: 20px;
-                    box-sizing: border-box;
-                    border: 1px solid rgba(0, 0, 0, 0.125);
-                    width: 100%;
-                    margin-bottom: 60px;
-                    -webkit-column-break-inside: avoid;
-                    transition: all 1.5s;
-                    cursor: pointer;
-
-                    > img {
-                        border-radius: 20px 20px 0 0;
-                        width: 100%;
-                    }
-
-                    // 內容文字
-                    .container_text {
-                        /* border: 1px solid red; */
-                        display: flex;
-                        justify-content: space-between;
-                        margin: 15px 20px;
-                        width: calc(100% - 40px);
-
-                        // 發文人員照片
-                        .text {
-                            img {
-                                width: 35px;
-                                vertical-align: middle;
-                            }
-                            span {
-                                display: inline-block;
-                                margin-left: 5px;
-                            }
-                        }
-
-                        // Icon
-                        .text_icon {
-                            display: flex;
-                            align-self: center;
-                            .Icon {
-                                display: flex;
-                                margin-left: 15px;
-                                img {
-                                    // border: 1px solid blue;
-                                    width: 20px;
-                                    height: 20px;
-                                }
-
-                                span {
-                                    height: 20px;
-                                    line-height: 20px;
-                                    margin-left: 5px;
-                                    color: #888;
-                                }
-                            }
-                        }
-                    }
-
-                    // 主題
-                    h2 {
-                        display: inline-block;
-                        margin: 5px 20px;
-                        width: calc(100% - 40px);
-                        font-weight: 700;
-                        font-size: 20px;
-                    }
-
-                    // 主題內容
-                    p {
-                        /* border: 1px solid red; */
-                        display: inline-block;
-                        margin: 0 20px 15px;
-                        width: calc(100% - 40px);
-                        line-height: 2;
-                        font-size: 16px;
-                        letter-spacing: 1px;
-                    }
-                }
-            }
-
-            // more按扭
-            .more_btn {
-                position: absolute;
-                bottom: 6%;
-                left: 50%;
-                transform: translate(-50%, 0);
-                outline: none;
-                display: inline-block;
-                text-align: center;
-                width: 200px;
-                font-size: 20px;
-                letter-spacing: 1.5px;
-                line-height: 40px;
-                background-color: rgb(10, 81, 135);
-                color: white;
-                border-radius: 10px;
-                text-decoration: none;
-                transition: all 0.5s;
-                filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.3));
+            // 圖片
+            .secImg {
+                overflow: hidden;
+                font-size: 0;
                 cursor: pointer;
-                &:hover {
-                    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.3));
-                    background-color: orange;
-                    color: black;
+                img {
+                    width: 100%;
+                    height: 240px;
+                    transition: all 2s;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
                 }
             }
+
+            // 狀態欄
+            .sec3_status {
+                // border: 1px solid;
+                margin: 10px 0 20px;
+                padding: 0 15px;
+                display: flex;
+                align-items: center;
+
+                .sec3_status--icon {
+                    font-size: 0;
+                    img {
+                        width: 20px;
+                        vertical-align: middle;
+                        margin-right: 10px;
+                    }
+                    span {
+                        font-size: 1rem;
+                        vertical-align: middle;
+                    }
+                }
+
+                // 第一個圖案變大
+                .sec3_status--icon:nth-child(1) {
+                    flex-grow: 1;
+                    img {
+                        width: 40px;
+                    }
+                }
+                // 推左距離
+                .sec3_status--icon + .sec3_status--icon {
+                    margin-left: 10px;
+                }
+            }
+
+            //內文文字
+            .sec3_text {
+                padding: 0 15px;
+                margin-bottom: 20px;
+                h3 {
+                    font-size: 1.125rem;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+                p {
+                    letter-spacing: 1.5px;
+                    line-height: 25px;
+                }
+            }
+        }
+        .section_3_box:nth-child(4),
+        .section_3_box:nth-child(5),
+        .section_3_box:nth-child(6) {
+            margin-bottom: 0;
+        }
+    }
+
+    .more {
+        display: block;
+        width: 120px;
+        margin: 50px auto 0;
+        font-size: 1.25rem;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 7px 0;
+        text-align: center;
+        color: white;
+        border-radius: 10px;
+        background-color: rgb(10, 81, 135);
+        filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.3));
+        transition: all 0.5s;
+
+        &:hover {
+            filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.3));
+            background-color: orange;
+            color: black;
         }
     }
 }
@@ -449,14 +401,6 @@
     .wrapper {
         .section_1 {
             margin: 80px auto 80px;
-            h1 {
-                &::after {
-                    width: 50%;
-                }
-                &::before {
-                    width: 50%;
-                }
-            }
             .section_1_box {
                 width: 100%;
                 margin-bottom: 5px;
@@ -480,15 +424,6 @@
             }
         }
         .section_2 {
-            h1 {
-                &::after {
-                    width: 50%;
-                }
-                &::before {
-                    width: 50%;
-                }
-            }
-
             .section_2_content {
                 .abgne_tab {
                     width: 100%;
@@ -532,23 +467,11 @@
             }
         }
         .section_3 {
+            width: 100%;
             margin: 80px auto 80px;
-            h1 {
-                &::after {
-                    width: 50%;
-                }
-                &::before {
-                    width: 50%;
-                }
-            }
-
             .section_3_box {
-                width: 100%;
-
-                > div {
-                    column-count: 3;
-                    column-gap: 50px;
-                }
+                width: 45%;
+                margin-bottom: 30px !important;
             }
         }
     }
@@ -574,15 +497,6 @@
                             }
                         }
                     }
-                }
-            }
-        }
-
-        .section_3 {
-            .section_3_box {
-                > div {
-                    column-count: 2;
-                    column-gap: 40px;
                 }
             }
         }
@@ -655,38 +569,27 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .wrapper {
+        h2 {
+            margin-bottom: 50px;
+            &::after {
+                width: 50%;
+            }
+            &::before {
+                width: 50%;
+            }
+        }
         .section_3 {
             .section_3_box {
-                width: 90%;
-
-                > div {
-                    column-count: 1;
-                    column-gap: 25px;
-
-                    .container3_item {
-                        .container_text {
-                            .text span {
-                                font-size: 1rem;
-                            }
-                            .text_icon span {
-                                font-size: 1rem;
-                                line-height: 20px;
-                            }
-                        }
-                        h2 {
-                            font-size: 18px;
-                        }
-                    }
-                }
-
-                .more_btn {
-                    bottom: -1%;
-                }
+                width: 95%;
             }
         }
     }
 }
-
 @media screen and (max-width: 499px) {
     .wrapper {
         .section_2 {

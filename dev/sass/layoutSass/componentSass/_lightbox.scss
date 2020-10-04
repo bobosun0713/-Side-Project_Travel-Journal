@@ -12,7 +12,7 @@
         height: 100%;
     }
     .content {
-        border: 1px solid blue;
+        // border: 1px solid blue;
         background-color: white;
         border-radius: 30px;
         position: absolute;
@@ -30,18 +30,15 @@
             width: 30px;
             height: 30px;
             border-radius: 100%;
-            right: 12px;
+            right: 15px;
             top: 12px;
             cursor: pointer;
-            &:active {
-                background-color: orange;
-            }
             &::before {
                 content: "";
                 width: 20px;
                 height: 3px;
                 top: 13px;
-                right: 5px;
+                right: 4px;
                 background-color: black;
                 position: absolute;
                 transform: rotate(45deg);
@@ -51,7 +48,7 @@
                 width: 20px;
                 height: 3px;
                 top: 13px;
-                right: 5px;
+                right: 4px;
                 background-color: black;
                 position: absolute;
                 transform: rotate(-45deg);
@@ -59,28 +56,58 @@
         }
 
         .registered_login {
-            height: 400px;
-            font-size: 0;
-            text-align: center;
-            padding: 20px;
-            // margin: auto;
+            padding: 40px;
+            .registor {
+                display: flex;
+                flex-direction: column;
+                > li + li {
+                    margin-top: 10px;
+                }
 
-            .registered_login_img {
-                display: inline-block;
-                width: 150px;
-                height: 100px;
-            }
+                // 會員登入標題
+                h2 {
+                    font-size: 1.125rem;
+                    text-align: center;
+                }
 
-            h1 {
-                font-size: 20px;
-                padding: 10px;
-            }
+                // 登入帳密
+                .reg-login span {
+                    display: block;
+                    font-size: 0;
+                    label {
+                        font-size: 1rem;
+                        border: 0.5px solid #888;
+                        box-sizing: border-box;
+                        display: inline-block;
+                        text-align: center;
+                        border-radius: 10px 0px 0px 10px;
+                        height: 32px;
+                        line-height: 30px;
+                        width: 55px;
+                        vertical-align: top;
+                    }
+                    input {
+                        height: 32px;
+                        width: 200px;
+                        border-radius: 0 10px 10px 0;
+                        border: 0.5px solid gray;
+                        border-left: 0;
+                        box-sizing: border-box;
+                        padding: 0 10px;
+                        outline: none;
+                        &:focus {
+                            background-color: hsla(200, 80%, 90%, 1);
+                        }
+                    }
+                }
+                .reg-login span + span {
+                    margin-top: 10px;
+                }
 
-            .registered_log {
-                a {
-                    font-size: 16px;
+                // 登入按鈕
+                .reg-btn a {
+                    font-size: 1rem;
                     display: inline-block;
-                    /* border: 1px solid red; */
                     background-color: rgb(10, 81, 135);
                     color: white;
                     border-radius: 5px;
@@ -95,64 +122,37 @@
                         color: black;
                     }
                 }
+
+                // 註冊 / 忘記密碼
+                .reg-reset {
+                    margin-top: 20px;
+                    display: flex;
+                    a {
+                        display: block;
+                        margin: 0 auto;
+                        font-size: 1rem;
+                        text-decoration: none;
+                        color: rgb(10, 81, 135);
+                        transition: all 0.15s;
+                        &:hover {
+                            color: orange;
+                        }
+                    }
+                }
             }
 
-            .registered_block {
-                margin-bottom: 10px;
+            h1 {
+                font-size: 20px;
+                padding: 10px;
+            }
+        }
+    }
 
-                label {
-                    font-size: 1rem;
-                    border: 1px solid #888;
-                    box-sizing: border-box;
-                    display: inline-block;
-                    border-radius: 10px 0px 0px 10px;
-                    height: 32px;
-                    line-height: 30px;
-                    width: 55px;
-                    vertical-align: top; /* 讓表格對期*/
-                }
-
-                > input {
-                    height: 32px;
-                    width: 200px;
-                    border-radius: 0 10px 10px 0;
-                    box-sizing: border-box;
-                    padding: 0 10px;
-                    outline: none;
-                    &:focus {
-                        background-color: hsla(200, 80%, 90%, 1);
-                    }
-                }
-                > .re {
-                    display: inline-block;
-                    width: 15px;
-                    height: 17px;
-                }
-                .rePsw {
-                    border: 0;
-                    line-height: 22px;
-                    height: 100%;
-                }
-
-                span {
-                    /* border: 1px solid red; */
-                    font-size: 16px;
-                    display: inline-block;
-                    height: 20px;
-                    line-height: 20px;
-                    vertical-align: top;
-                }
-
-                a {
-                    display: inline-block;
-                    font-size: 16px;
-                    text-decoration: none;
-                    margin: 20px 20px;
-                    color: rgb(10, 81, 135);
-                    &:hover {
-                        color: orange;
-                    }
-                }
+    // RWD 開始
+    @media screen and (max-width: 500px) {
+        .content {
+            .registered_login {
+                padding: 20px;
             }
         }
     }

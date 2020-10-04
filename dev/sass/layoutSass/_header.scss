@@ -2,10 +2,12 @@
     display: flex;
     height: 80px;
     justify-content: space-between;
-    // box-shadow: 0px 2px 10px black;
-    width: 1200px;
     margin: 0 auto;
-    position: unset;
+    top: 0;
+    position: sticky;
+    background-color: white;
+    z-index: 10;
+    box-shadow: 0px 2px 7px 0px #bab8b8;
 
     // LOGO
     .logo {
@@ -70,7 +72,7 @@
             width: 65%;
             background-color: black;
             transform-origin: center;
-            transform: translate(-50%, 0%) scalex(0);
+            transform: translate(-50%, 0%) scaleX(0);
             transition: transform 0.7s;
         }
         &:hover::before {
@@ -88,12 +90,7 @@
     .header {
         width: 100%;
         background-color: white;
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
         height: 50px;
-        z-index: 10;
-        box-shadow: 0px 1px 5px black;
 
         // LOGO
         .logo > a img {

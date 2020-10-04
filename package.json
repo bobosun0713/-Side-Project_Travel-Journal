@@ -21,6 +21,8 @@
         "gulp-jshint": "^2.1.0",
         "gulp-sass": "^4.0.2",
         "gulp-sourcemaps": "^2.6.5",
+        "autoprefixer": "^6.5.3",
+        "gulp-postcss": "^6.2.0",
         "jshint": "^2.11.0"
     }
 }

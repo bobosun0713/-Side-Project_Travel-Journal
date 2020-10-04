@@ -4,7 +4,7 @@
         margin: 100px auto 120px;
 
         // 標題
-        > h1 {
+        > h2 {
             text-align: center;
             font-size: 25px;
             font-weight: 700;
@@ -18,7 +18,8 @@
                 content: "";
                 width: 100%;
                 display: inline-block;
-                border: 1.5px solid black;
+                height: 3px;
+                background-color: black;
                 top: 50%;
                 right: 100%;
             }
@@ -27,7 +28,8 @@
                 content: "";
                 width: 100%;
                 display: inline-block;
-                border: 1.5px solid black;
+                height: 3px;
+                background-color: black;
                 top: 50%;
                 left: 100%;
             }
@@ -292,13 +294,6 @@
 @media screen and (max-width: 768px) {
     .topic_wrapper {
         .topic {
-            > h1 {
-                &::after,
-                &::before {
-                    width: 50%;
-                }
-            }
-
             .topic_bar {
                 justify-content: center;
                 margin: auto;
@@ -329,6 +324,20 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .topic_wrapper {
+        h2 {
+            margin-bottom: 50px;
+            &::after {
+                width: 50%;
+            }
+            &::before {
+                width: 50%;
             }
         }
     }
