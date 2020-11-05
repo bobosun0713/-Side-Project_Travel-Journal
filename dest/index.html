@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Travel Journal</title>
+        <link rel="shortcut icon" href="./img/logo/title.png" type="image/x-icon" />
+        <link rel="stylesheet" href="./css/main.css" />
+        <link rel="stylesheet" href="./css/swiper.min.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script src="./js/swiper.min.js"></script>
+    </head>
+
+    <body>
+        <!-- 登入燈箱 -->
+        <div class="lightbox-target" id="lightbox">
+    <div id="cancel_login"></div>
+    <div class="content">
+        <form action="" class="registered_login">
+            <ul class="registor">
+                <li><img src="./img/logo/logo2.svg" alt="" /></li>
+                <li><h2>會員登入</h2></li>
+                <li class="reg-login">
+                    <span>
+                        <label for="">帳號 :</label>
+                        <input type="text" name="" id="" />
+                    </span>
+                    <span>
+                        <label for="">密碼 :</label>
+                        <input type="text" name="" id="" />
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <input type="checkbox" name="" id="re" class="re" />
+                        <label for="re" class="rePsw">記住我</label>
+                    </span>
+                </li>
+                <li class="reg-btn"><a href="">登入</a></li>
+                <li class="reg-reset"><a href="">註冊</a> <a href="">忘記密碼</a></li>
+            </ul>
+        </form>
+        <a href="#" id="lightboxClose"></a>
+    </div>
+</div>
+
+        <!-- GO TOP -->
+        <button type="button" id="BackTop" class="toTop-arrow">
+    <img src="./img/icon/arrows.svg" alt="" />
+</button>
+
+        <div class="wrapper">
+            <!-- 導覽列 -->
+            <header class="header">
+    <!-- LOGO -->
+    <div class="logo">
+        <a href="./index.html"><img src="./img/logo/logo1.svg" /></a>
+    </div>
+    <!-- 選單 -->
+    <nav class="main_nav">
+        <ul class="nav_list">
+            <li><a href="./location.html" class="bottom_line @@001">搜尋景點</a></li>
+            <li><a href="./colimn.html" class="bottom_line @@002">旅遊分享</a></li>
+            <li><a href="./topic.html" class="bottom_line @@003">話題專欄</a></li>
+            <li><a href="./connection.html" class="bottom_line @@004">聯絡資訊</a></li>
+            <li><a href="#" class="bottom_line button" id="login_btn">登入</a></li>
+        </ul>
+    </nav>
+    <!-- 漢堡 -->
+    <button class="hamburger hamburger--3dx btn_switch" type="button">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+</header>
+
+            <!-- 封面 -->
+            <div class="index_banner">
+                <div class="index_arrow"></div>
+            </div>
+            <!-- 第一區 -->
+            <section class="section_1">
+                <h2>熱門景點</h2>
+                <div class="section_1_box">
+                    <div class="box_1" data-aos="flip-left" data-aos-delay="200">
+                        <a href=""><img src="./img/index/hoi_sen_mori.jpg" /><span>森活村</span></a>
+                    </div>
+                    <div class="box_1" data-aos="flip-left" data-aos-delay="300">
+                        <a href=""><img src="./img/index/forest.jpg" /><span>森林之歌</span></a>
+                    </div>
+                    <div class="box_1" data-aos="flip-left" data-aos-delay="400">
+                        <a href=""><img src="./img/index/stare.jpg" /><span>職人町</span></a>
+                    </div>
+                </div>
+                <div class="section_1_box">
+                    <div class="box_2" data-aos="flip-left" data-aos-delay="500">
+                        <a href=""><img src="./img/index/luye_high_platform.jpg" /><span>鹿野高台</span></a>
+                    </div>
+                    <div class="box_2" data-aos="flip-left" data-aos-delay="600">
+                        <a href=""><img src="./img/index/meirenli_painted.jpg" /><span>美仁里彩繪村</span></a>
+                    </div>
+                </div>
+            </section>
+            <!-- 第二區 -->
+            <section class="section_2">
+                <h2>旅遊分享</h2>
+                <div class="section_2_content">
+                    <div class="abgne_tab">
+                        <div class="tab_container">
+                            <div id="tab1" class="tab_content">
+                                <div class="item_img">
+                                    <img src="./img/index/wu_dedian.jpg" alt="" />
+                                </div>
+                                <div class="item_p">
+                                    <div class="item_border">
+                                        <h3>武德殿</h3>
+                                        <p>
+                                            日式風格的台南武德殿現為忠義國小禮堂，為日據時代宣揚傳統武道場，看似日本神社造型，其實整棟都是用鋼筋混凝土仿傳統木造而成的殿堂，台南這座最具規模的武...
+                                        </p>
+                                        <a href="">more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab2" class="tab_content">
+                                <div class="item_img">
+                                    <img src="./img/index/water_restaurant.jpg" alt="" />
+                                </div>
+                                <div class="item_p">
+                                    <div class="item_border">
+                                        <h3>翠湖水上餐廳</h3>
+                                        <p>
+                                            翠湖除了有室內的座位區，另外還有戶外區，涼涼的晚上坐在小棚子用餐，感覺一定很不錯，而且店家還有另外規劃送餐車呢之前聽朋友說晚上點燈後的翠湖別有一番風...
+                                        </p>
+                                        <a href="">more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab3" class="tab_content">
+                                <div class="item_img">
+                                    <img src="./img/index/jiufen/jiufen5.jpg" alt="" />
+                                </div>
+                                <div class="item_p">
+                                    <div class="item_border">
+                                        <h3>九份</h3>
+                                        <p>
+                                            原以為時間晚了，遊客應該會比較少，結果大錯特錯，遊客依然好多，而且直至入夜後，店家都要打烊了，人潮還是不少...外國觀光客很喜歡這個與日本動畫大師宮崎駿...
+                                        </p>
+                                        <a href="">more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab4" class="tab_content">
+                                <div class="item_img">
+                                    <img src="./img/index/wangyou_valley.jpg" alt="" />
+                                </div>
+                                <div class="item_p">
+                                    <div class="item_border">
+                                        <h3>忘憂谷</h3>
+                                        <p>
+                                            要說世界上有能忘憂的地方在哪？我想這一刻我找到了，基隆最新IG打卡約會勝地～望幽谷登場，穿過像宮崎駿風之谷般的綠谷，等待著旅人的是美到無法形容的藍海可...
+                                        </p>
+                                        <a href="">more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab5" class="tab_content">
+                                <div class="item_img">
+                                    <img src="./img/index/green_fantasy_forest.jpg" alt="" />
+                                </div>
+                                <div class="item_p">
+                                    <div class="item_border">
+                                        <h3>格林奇幻森林</h3>
+                                        <p>
+                                            近幾年來台灣休閒旅遊風氣興盛、手機普及、各地因應而生了好多家浪漫、夢幻的私人莊園及休閒農場及餐廳，同時也是拜臉書、IG打卡夯，人人都想成為往美、網紅於...
+                                        </p>
+                                        <a href="">more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="tabs">
+                            <li>
+                                <a href="#tab1" data-aos="flip-left" data-aos-delay="200">
+                                    <img src="./img/index/wu_dedian.jpg" alt="" />
+                                    <div class="img_title">
+                                        <span>桃園</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tab2" data-aos="flip-left" data-aos-delay="400">
+                                    <img src="./img/index/water_restaurant.jpg" alt="" />
+                                    <div class="img_title">
+                                        <span>高雄</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tab3" data-aos="flip-left" data-aos-delay="600">
+                                    <img src="./img/index/jiufen/jiufen5.jpg" alt="" />
+                                    <div class="img_title">
+                                        <span>台北</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tab4" data-aos="flip-left" data-aos-delay="800">
+                                    <img src="./img/index/wangyou_valley.jpg" alt="" />
+                                    <div class="img_title">
+                                        <span>基隆</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tab5" data-aos="flip-left" data-aos-delay="1000">
+                                    <img src="./img/index/green_fantasy_forest.jpg" alt="" />
+                                    <div class="img_title">
+                                        <span>苗栗</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- 第三區 -->
+            <section class="section_3">
+                <h2>熱門話題</h2>
+                <div class="section_3_container">
+                    <div class="section_3_box" data-aos="fade-up" data-aos-delay="400">
+                        <div class="secImg">
+                            <img src="./img/index/food/chijo.jpg" alt="" />
+                        </div>
+                        <div class="sec3_status">
+                            <div class="sec3_status--icon">
+                                <img src="./img/icon/family01.png" alt="" /><span>Jerry</span>
+                            </div>
+                            <div class="sec3_status--icon">
+                                <img src="./img/icon/heart.png" alt="" /><span>123</span>
+                            </div>
+                            <div class="sec3_status--icon"><img src="./img/icon/eye.png" alt="" /><span>321</span></div>
+                        </div>
+                        <div class="sec3_text">
+                            <h3>美食</h3>
+                            <p>
+                                湯頭選擇日本味非常濃郁！如果喜歡濃郁但是不要太濃的話建議選台灣味（比較合台灣人的胃口）料多豐富、吃完一碗可以飽一整個下午會想再去吃，人多的時候要排...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="section_3_box" data-aos="fade-up" data-aos-delay="600">
+                        <div class="secImg">
+                            <img src="./img/index/food/lancheng_jingying_roast_duck.jpg" alt="" />
+                        </div>
+                        <div class="sec3_status">
+                            <div class="sec3_status--icon">
+                                <img src="./img/icon/family01.png" alt="" /><span>Jerry</span>
+                            </div>
+                            <div class="sec3_status--icon">
+                                <img src="./img/icon/heart.png" alt="" /><span>123</span>
+                            </div>
+                            <div class="sec3_status--icon"><img src="./img/icon/eye.png" alt="" /><span>321</span></div>
+                        </div>
+                        <div class="sec3_text">
+                            <h3>美食</h3>
+                            <p>
+                                口味上還不錯，奶茶比較討喜，捲捲覺得來到『夜貓子雪花氷』就算是女王或是宅姐，一進門都會秒變公主，簡直是少女心超級殺手！好不好吃不會擺在第一順位考量...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="section_3_box" data-aos="fade-up" data-aos-delay="800">
+                        <div class="secImg">
+                            <img src="./img/index/food/white_wood.jpg" alt="" />
+                        </div>
+                        <div class="sec3_status">
+                            <div class="sec3_status--icon">
+                                <img src="./img/icon/family01.png" alt="" /><span>Jerry</span>
+                            </div>
+                            <div class="sec3_status--icon">
+                                <img src="./img/icon/heart.png" alt="" /><span>123</span>
+                            </div>
+                            <div class="sec3_status--icon"><img src="./img/icon/eye.png" alt="" /><span>321</span></div>
+                        </div>
+                        <div class="sec3_text">
+                            <h3>住宿</h3>
+                            <p>
+                                WoodWhiteHouse 白木旅人宜蘭頭城鎮裡的小住所Karen &
+                                Rick兩人親手打造自然舒適空間Karen是設計師也是演員Rick是船長也是衝浪教練房子裡主要氛圍...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="section_3_box" data-aos="fade-up" data-aos-delay="800">
+                        <div class="secImg">
+                            <img src="./img/index/food/white_wood.jpg" alt="" />
+                        </div>
+                        <div class="sec3_status">
+                            <div class="sec3_status--icon">
+                                <img src="./img/icon/family01.png" alt="" /><span>Jerry</span>
+                            </div>
+                            <div class="sec3_status--icon">
+                                <img src="./img/icon/heart.png" alt="" /><span>123</span>
+                            </div>
+                            <div class="sec3_status--icon"><img src="./img/icon/eye.png" alt="" /><span>321</span></div>
+                        </div>
+                        <div class="sec3_text">
+                            <h3>住宿</h3>
+                            <p>
+                                WoodWhiteHouse 白木旅人宜蘭頭城鎮裡的小住所Karen &
+                                Rick兩人親手打造自然舒適空間Karen是設計師也是演員Rick是船長也是衝浪教練房子裡主要氛圍...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="section_3_box" data-aos="fade-up" data-aos-delay="600">
+                        <div class="secImg">
+                            <img src="./img/index/food/chijo.jpg" alt="" />
+                        </div>
+                        <div class="sec3_status">
+                            <div class="sec3_status--icon">
+                                <img src="./img/icon/family01.png" alt="" /><span>Jerry</span>
+                            </div>
+                            <div class="sec3_status--icon">
+                                <img src="./img/icon/heart.png" alt="" /><span>123</span>
+                            </div>
+                            <div class="sec3_status--icon"><img src="./img/icon/eye.png" alt="" /><span>321</span></div>
+                        </div>
+                        <div class="sec3_text">
+                            <h3>美食</h3>
+                            <p>
+                                湯頭選擇日本味非常濃郁！如果喜歡濃郁但是不要太濃的話建議選台灣味（比較合台灣人的胃口）料多豐富、吃完一碗可以飽一整個下午會想再去吃，人多的時候要排...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="section_3_box" data-aos="fade-up" data-aos-delay="400">
+                        <div class="secImg">
+                            <img src="./img/index/food/white_wood.jpg" alt="" />
+                        </div>
+                        <div class="sec3_status">
+                            <div class="sec3_status--icon">
+                                <img src="./img/icon/family01.png" alt="" /><span>Jerry</span>
+                            </div>
+                            <div class="sec3_status--icon">
+                                <img src="./img/icon/heart.png" alt="" /><span>123</span>
+                            </div>
+                            <div class="sec3_status--icon"><img src="./img/icon/eye.png" alt="" /><span>321</span></div>
+                        </div>
+                        <div class="sec3_text">
+                            <h3>住宿</h3>
+                            <p>
+                                WoodWhiteHouse 白木旅人宜蘭頭城鎮裡的小住所Karen &
+                                Rick兩人親手打造自然舒適空間Karen是設計師也是演員Rick是船長也是衝浪教練房子裡主要氛圍...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <a href="./topic.html" class="more">More</a>
+            </section>
+            <footer>
+    <div class="footer">
+        <div class="footer_section_1">
+            <ul class="footer01">
+                <li><p>關於旅遊日記</p></li>
+                <li><a href="">關於我們</a></li>
+                <li><a href="">聯絡我們</a></li>
+                <li><a href="">服務條款</a></li>
+                <li><a href="">人才招募</a></li>
+            </ul>
+            <ul class="footer01">
+                <li><p>旅遊日記地圖</p></li>
+                <li><a href="">首頁</a></li>
+                <li><a href="">搜尋景點</a></li>
+                <li><a href="">話題專欄</a></li>
+                <li><a href="">聯絡資訊</a></li>
+            </ul>
+            <ul class="footer01">
+                <li><p>客服中心</p></li>
+                <li><a href="">會員帳號密碼</a></li>
+                <li><a href="">常見問題</a></li>
+                <li><a href="">幫助中心</a></li>
+                <li><a href="">客服信箱</a></li>
+            </ul>
+        </div>
+        <div class="footer_section_2">
+            <ul class="footer02">
+                <li><img src="./img/logo/logo2.svg" alt="" /></li>
+                <li>
+                    <a href="#"><img src="./img/icon/facebook.svg" alt="" /></a>
+                    <a href="#"><img src="./img/icon/instagram.svg" alt="" /></a>
+                    <a href="#"><img src="./img/icon/twitter.svg" alt="" /></a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer_section_3">
+            <p>2019 &copy Travel Journal All Right Reserved</p>
+        </div>
+    </div>
+</footer>
+
+        </div>
+        <script src="./js/all.js"></script>
+    </body>
+</html>
