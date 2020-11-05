@@ -43,24 +43,33 @@
             .ask_wrap {
                 .ask_qa {
                     width: 350px;
-                    ul > li > a {
-                        border: 1px solid rgba(0, 0, 0, 0.2);
-                        box-sizing: border-box;
-                        display: block;
-                        width: 100%;
-                        height: 50px;
-                        padding: 0px 10px;
-                        line-height: 50px;
-                        text-decoration: none;
-                        background-color: #fff;
-                        color: black;
-
-                        &::after {
-                            content: "\27A4";
-                            position: relative;
-                            left: 250px;
+                    ul{
+                        border: 0.5px solid  rgba(128, 128, 128, 0.445);;
+                        border-radius: 10px;
+                        > li{
+                            border-bottom: 0.5px solid rgba(128, 128, 128, 0.445);
+                            &:last-child{
+                                border-bottom: 0;
+                            }
+                            > a {
+                                box-sizing: border-box;
+                                display: block;
+                                width: 100%;
+                                height: 50px;
+                                padding: 0px 10px;
+                                line-height: 50px;
+                                text-decoration: none;
+                                color: black;
+        
+                                &::after {
+                                    content: "\27A4";
+                                    position: relative;
+                                    left: 250px;
+                                }
+                            }
                         }
                     }
+                   
                 }
 
                 .ask_question {
@@ -101,7 +110,7 @@
                         height: 30px;
                         vertical-align: top;
                         -webkit-appearance: none;
-                        padding: 0 10px;
+                        padding: 0 5px;
                         &:focus {
                             background-color: hsla(200, 80%, 90%, 1);
                         }

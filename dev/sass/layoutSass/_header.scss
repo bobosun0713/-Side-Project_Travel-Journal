@@ -7,7 +7,7 @@
     position: sticky;
     background-color: white;
     z-index: 10;
-    box-shadow: 0px 2px 7px 0px #bab8b8;
+    box-shadow: 0px 3px 5px rgba(189, 189, 189, 0.3);
 
     // LOGO
     .logo {
@@ -90,18 +90,18 @@
     .header {
         width: 100%;
         background-color: white;
-        height: 50px;
+        // height: 50px;
 
         // LOGO
         .logo > a img {
-            width: 180px;
+            width: 250px;
         }
 
         // 選單
         .main_nav {
             /* position: relative; */
             position: absolute;
-            top: 50px;
+            top: 80px;
             width: 100%;
             display: none;
             z-index: 1;
@@ -111,6 +111,14 @@
                 text-align: center;
                 background-color: rgba(255, 255, 255, 0.98);
                 height: 100vh;
+
+                li{
+                    border-bottom: 1px solid #09508741;
+
+                    &:hover{
+                        background-color:#09508750 ;
+                    }
+                }
             }
         }
 
@@ -120,7 +128,7 @@
             position: absolute;
             display: block;
             right: 0;
-            top: -3px;
+            top: 10px;
         }
     }
 }
