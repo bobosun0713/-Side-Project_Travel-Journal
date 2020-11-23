@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Travel Journal｜話題專欄</title>
+    <link rel="shortcut icon" href="./img/logo/title.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/swiper.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+</head>
+
+<body>
+     <!-- 登入燈箱 -->
+     <div class="lightbox-target" id="lightbox">
+    <div id="cancel_login"></div>
+    <div class="content">
+        <form action="" class="registered_login">
+            <ul class="registor">
+                <li><img src="./img/logo/logo2.svg" alt="" /></li>
+                <li><h2>會員登入</h2></li>
+                <li class="reg-login">
+                    <span>
+                        <label for="">帳號 :</label>
+                        <input type="text" name="" id="" />
+                    </span>
+                    <span>
+                        <label for="">密碼 :</label>
+                        <input type="text" name="" id="" />
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <input type="checkbox" name="" id="re" class="re" />
+                        <label for="re" class="rePsw">記住我</label>
+                    </span>
+                </li>
+                <li class="reg-btn"><a href="">登入</a></li>
+                <li class="reg-reset"><a href="">註冊</a> <a href="">忘記密碼</a></li>
+            </ul>
+        </form>
+        <a href="#" id="lightboxClose"></a>
+    </div>
+</div>
+
+     <!-- GO TOP -->
+     <button type="button" id="BackTop" class="toTop-arrow">
+    <img src="./img/icon/arrows.svg" alt="" />
+</button>
+
+    <div class="topic_wrapper">
+        <!-- 導覽列 -->
+        <header class="header">
+    <!-- LOGO -->
+    <div class="logo">
+        <a href="./index.html"><img src="./img/logo/logo1.svg" /></a>
+    </div>
+    <!-- 選單 -->
+    <nav class="main_nav">
+        <ul class="nav_list">
+            <li><a href="./location.html" class="bottom_line @@001">搜尋景點</a></li>
+            <li><a href="./colimn.html" class="bottom_line @@002">旅遊分享</a></li>
+            <li><a href="./topic.html" class="bottom_line on">話題專欄</a></li>
+            <li><a href="./connection.html" class="bottom_line @@004">聯絡資訊</a></li>
+            <li><a href="#" class="bottom_line button" id="login_btn">登入</a></li>
+        </ul>
+    </nav>
+    <!-- 漢堡 -->
+    <button class="hamburger hamburger--3dx btn_switch" type="button">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+</header>
+
+        <!-- 這是背景圖 -->
+        <div class="topic">
+            <h2>話題專欄</h2>
+            <!-- 發表區 -->
+            <div class="ask">
+                <div class="ask_wrap">
+                    <div class="ask_qa">
+                        <ul>
+                            <li><a href="">美食資訊</a></li>
+                            <li><a href="">住宿資訊</a></li>
+                            <li><a href="">交通資訊</a></li>
+                            <li><a href="">其他資訊</a></li>
+                        </ul>
+                    </div>
+                    <div class="ask_question">
+                        <a href="">&#10010我要發表</a>
+                    </div>
+                    <div class="ask_input">
+                        <a href=""><img src="./img/icon/magnifier.png" alt=""></a>
+                        <input type="search" id="a" placeholder="輸入關鍵字,快速找尋你要的">
+                    </div>
+                </div>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./img/index/Taipei.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/index/Taitung.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/index/newTaipei.jpeg" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/index/Yilan.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/index/Taichung.jpg" alt=""></div>
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+            <!-- bar 選擇 -->
+            <div class="topic_bar">
+                <div class="topic_area">
+                    <p>地區選擇 :</p>
+                    <select name="" id="" >
+                        <option value="">全部</option>
+                        <option value="">北部</option>
+                        <option value="">中部</option>
+                        <option value="">南部</option>
+                        <option value="">東部</option>
+                    </select>
+                </div>
+                <div class="topic_area">
+                    <p>主題選擇 :</p>
+                    <select name="" id="">
+                        <option value="">全部</option>
+                        <option value="">美食</option>
+                        <option value="">住宿</option>
+                        <option value="">交通</option>
+                    </select>
+                </div>
+                <div class="topic_area">
+                    <p>排序選擇 :</p>
+                    <select name="" id="">
+                        <option value="">最新分享</option>
+                        <option value="">瀏覽最多</option>
+                        <option value="">收藏最多</option>
+                        <option value="">我的發表</option>
+                    </select>
+                </div>
+            </div>
+            <!-- 瀑布流 -->
+            <div class="topic_box">
+                <div>
+                    <div class="topic_item" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <img src="./img/index/food/kichiya.jpg" alt="">
+                        <div class="topic_text">
+                            <div class="text"><img src="./img/icon/family01.png"><span>Jerry</span></div>
+                            <div class="text_icon">
+                                <div class="Icon"><img src="./img/icon/heart.png" /><span>1232</span></div>
+                                <div class="Icon"><img src="./img/icon/eye.png" /><span>1232</span></div>
+                            </div>
+                        </div>
+                        <h2>美食</h2>
+                        <p>湯頭選擇日本味非常濃郁！如果喜歡濃郁但是不要太濃的話建議選台灣味（比較合台灣人的胃口）料多豐富、吃完一碗可以飽一整個下午會想再去吃，人多的時候要排...</p>
+                    </div>
+                    <div class="topic_item" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <img src="./img/index/food/chijo.jpg" alt="">
+                        <div class="topic_text">
+                            <div class="text"><img src="./img/icon/family01.png"><span>Jerry</span></div>
+                            <div class="text_icon">
+                                <div class="Icon"><img src="./img/icon/heart.png" /><span>1232</span></div>
+                                <div class="Icon"><img src="./img/icon/eye.png" /><span>1232</span></div>
+                            </div>
+                        </div>
+                        <h2>美食</h2>
+                        <p>Okaeriお帰り你回來啦．吃碗拉麵吧 ☞台北的奇蹟拉麵，還沒營業就先排隊，曾受蘋果日報推薦報導！燒餃子爆湯汁的好吃！拉麵濃郁至極，完全超乎想像，可別輕易嘗試...
+                        </p>
+                    </div>
+                    <div class="topic_item" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <img src="./img/index/food/white_wood.jpg" alt="">
+                        <div class="topic_text">
+                            <div class="text"><img src="./img/icon/family01.png"><span>Jerry</span></div>
+                            <div class="text_icon">
+                                <div class="Icon"><img src="./img/icon/heart.png" /><span>1232</span></div>
+                                <div class="Icon"><img src="./img/icon/eye.png" /><span>1232</span></div>
+                            </div>
+                        </div>
+                        <h2>住宿</h2>
+                        <p>
+                            Rick 和 Karen 最開始親手打造的空間每一個角落 都希望客人能感受到我們的用心我們會分享給大家在宜蘭頭城的美食和景點在這裡有位置擁有絕佳便利性不管要去山上或去海...
+                        </p>
+                    </div>
+                    <div class="topic_item" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <img src="./img/index/food/light_rail.jpg" alt="">
+                        <div class="topic_text">
+                            <div class="text"><img src="./img/icon/family01.png"><span>Jerry</span></div>
+                            <div class="text_icon">
+                                <div class="Icon"><img src="./img/icon/heart.png" /><span>1232</span></div>
+                                <div class="Icon"><img src="./img/icon/eye.png" /><span>1232</span></div>
+                            </div>
+                        </div>
+                        <h2>交通</h2>
+                        <p>
+                            全台第一條輕軌就在港都，且高雄輕軌規劃成環狀路線，可以讓高雄大眾運輸的交通網更完整一些，輕軌全線規劃總共有37站，目前第一階段C1~C14站將於9/26全線...
+                        </p>
+                    </div>
+                    <div class="topic_item" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <img src="./img/index/food/berkkin_beer.jpg" alt="">
+                        <div class="topic_text">
+                            <div class="text"><img src="./img/icon/family01.png"><span>Jerry</span></div>
+                            <div class="text_icon">
+                                <div class="Icon"><img src="./img/icon/heart.png" /><span>1232</span></div>
+                                <div class="Icon"><img src="./img/icon/eye.png" /><span>1232</span></div>
+                            </div>
+                        </div>
+                        <h2>美食</h2>
+                        <p>
+                            UCKSKIN BEERHOUSE 柏克金啤酒餐廳是金車集團新開幕的餐廳，在台北共有南京店和松仁旗艦店兩間，除了提供各式啤酒之外，也提供許多美味餐點，相當適合家庭...
+                        </p>
+                    </div>
+                    <div class="topic_item" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <img src="./img/index/food/hejiahuan_leisure_homestay.jpg" alt="">
+                        <div class="topic_text">
+                            <div class="text"><img src="./img/icon/family01.png"><span>Jerry</span></div>
+                            <div class="text_icon">
+                                <div class="Icon"><img src="./img/icon/heart.png" /><span>1232</span></div>
+                                <div class="Icon"><img src="./img/icon/eye.png" /><span>1232</span></div>
+                            </div>
+                        </div>
+                        <h2>住宿</h2>
+                        <p>
+                            用簡單的風格及設計師的品味，打造一個能完全放鬆身心的休憩空間，來到這裡，只需要帶著一顆放鬆的心，及簡單的行李，進入合家歡休閒民宿，除了給您一夜的好眠，我們熱...
+                        </p>
+                    </div>
+                    <div class="topic_item" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <img src="./img/index/food/hsinchu_transfer _station.jpg" alt="">
+                        <div class="topic_text">
+                            <div class="text"><img src="./img/icon/family01.png"><span>Jerry</span></div>
+                            <div class="text_icon">
+                                <div class="Icon"><img src="./img/icon/heart.png" /><span>1232</span></div>
+                                <div class="Icon"><img src="./img/icon/eye.png" /><span>1232</span></div>
+                            </div>
+                        </div>
+                        <h2>交通</h2>
+                        <p>
+                            往來新竹與台北間的國道客運，緩緩的駛入新竹車站後站正式告別了交通繁忙的前站地區同時也為新竹的大眾運輸，開啟了新的紀元，雖名為正式啟用，然而目前真正在使用轉運站...
+                        </p>
+                    </div>
+                    <div class="topic_item" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <img src="./img/index/food/unocoffe.jpg" alt="">
+                        <div class="topic_text">
+                            <div class="text"><img src="./img/icon/family01.png"><span>Jerry</span></div>
+                            <div class="text_icon">
+                                <div class="Icon"><img src="./img/icon/heart.png" /><span>1232</span></div>
+                                <div class="Icon"><img src="./img/icon/eye.png" /><span>1232</span></div>
+                            </div>
+                        </div>
+                        <h2>美食</h2>
+                        <p>
+                            哈比發現這間店網路上目前好像還沒有人寫過網誌耶. 還沒什麼人知道的樣子覺得有點可惜～因為UNO COFFEE的東西我覺得很不錯耶. 是臺灣自創...
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- 分頁標籤 -->
+            <div class="pagination_block">
+    <ul class="pagination">
+        <li><a href="#" class="-on">&#8678;</a></li>
+        <li><a href="#" class="-on">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">..</a></li>
+        <li><a href="#">10</a></li>
+        <li><a href="#">&#8680;</a></li>
+    </ul>
+</div>
+
+        </div>
+        <footer>
+    <div class="footer">
+        <div class="footer_section_1">
+            <ul class="footer01">
+                <li><p>關於旅遊日記</p></li>
+                <li><a href="">關於我們</a></li>
+                <li><a href="">聯絡我們</a></li>
+                <li><a href="">服務條款</a></li>
+                <li><a href="">人才招募</a></li>
+            </ul>
+            <ul class="footer01">
+                <li><p>旅遊日記地圖</p></li>
+                <li><a href="">首頁</a></li>
+                <li><a href="">搜尋景點</a></li>
+                <li><a href="">話題專欄</a></li>
+                <li><a href="">聯絡資訊</a></li>
+            </ul>
+            <ul class="footer01">
+                <li><p>客服中心</p></li>
+                <li><a href="">會員帳號密碼</a></li>
+                <li><a href="">常見問題</a></li>
+                <li><a href="">幫助中心</a></li>
+                <li><a href="">客服信箱</a></li>
+            </ul>
+        </div>
+        <div class="footer_section_2">
+            <ul class="footer02">
+                <li><img src="./img/logo/logo2.svg" alt="" /></li>
+                <li>
+                    <a href="#"><img src="./img/icon/facebook.svg" alt="" /></a>
+                    <a href="#"><img src="./img/icon/instagram.svg" alt="" /></a>
+                    <a href="#"><img src="./img/icon/twitter.svg" alt="" /></a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer_section_3">
+            <p>2019 &copy Travel Journal All Right Reserved</p>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <script>
+        var swiper = new Swiper(".swiper-container", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+            delay: 2000,
+        },
+    })
+    </script>
+    <script src="./js/all.js"></script>
+</body>
+
+</html>
