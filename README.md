@@ -7,4 +7,4 @@
 3. 網頁切版、RWD設計
 4. 特效套件的使用
  
- [demo](https://bobosun0713.github.io/Side-Project_Travel-Journal/dest/index.html)
+ [demo](https://bobosun0713.github.io/SideProject-TravelJournal/dest/index.html)
