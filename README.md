@@ -6,5 +6,5 @@
 2. LOGO設計、網站架構
 3. 網頁切版、RWD設計
 4. 特效套件的使用
-
-網址 : https://bobosun0713.github.io/Side-Project_Travel-Journal/dest/index.html
+ 
+ [demo](https://bobosun0713.github.io/Side-Project_Travel-Journal/dest/index.html)
